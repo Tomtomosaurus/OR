@@ -19,5 +19,8 @@ void backgroundWhiteScreen() {
   stroke(1);
 }
 void backgroundImage() {
-  
+  backgroundWhiteScreen();
+  tint(); //Day Mode, see ternary operator
+  tint(); //Night Mode, see ternary operator
+  image();
 }
