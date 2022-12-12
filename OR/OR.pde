@@ -30,10 +30,10 @@ void draw() {
   }
 }
 void mousePressed() {
-  if (OS==false) OS=true;
+  if (OS==false && startProgram==false) OS=true;
 }
 void keyPressed() {
-  if (OS && key=='e' || key=='E') {
+  if (OS && key==' ') {
     startProgram=true;
     OS=false;
   }

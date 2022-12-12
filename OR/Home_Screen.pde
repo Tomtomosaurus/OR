@@ -1,4 +1,7 @@
 int backgroundX, backgroundY, backgroundWidth, backgroundHeight;
+color dayModeTint, nightModeTint;
+int dayModeOpacity, nightModeOpacity;
+Boolean nightMode=false;
 
 void homeScreen() {
   println("Arrived at Home Screen");
@@ -19,8 +22,10 @@ void backgroundWhiteScreen() {
   stroke(1);
 }
 void backgroundImage() {
-  image(backgroundImage1, backgroundX, backgroundY, backgroundWidth, backgroundHeight);
-  //tint(); //Day Mode, see ternary operator
-  //tint(); //Night Mode, see ternary operator
-  //image();
+  if (nightMode==false) {
+    tint(dayModeTint, dayModeOpacity); //Day Mode, see ternary operator
+  } else {
+    tint(nightModeTint, nightModeOpacity); //Night Mode, see ternary operator
+  }
+  image(backgroundImage, backgroundX, backgroundY, backgroundWidth, backgroundHeight);
 }
