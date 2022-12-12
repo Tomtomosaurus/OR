@@ -1,4 +1,6 @@
+}
 String displayOrientation, brokenOrNot, turnPhunOrNot;
+int smallerDimension, largerDimension;
 
 void display() {
   if (appWidth >= appHeight) {
@@ -33,5 +35,4 @@ void display() {
   //Output #4 if error with any of the above, program will exit or be broken
   println(brokenOrNot);
   println(turnPhunOrNot);
-  //Hint: bruh, turn your phun
 }
