@@ -18,6 +18,7 @@ void draw() {
   }
   if (startProgram) {
     homeScreen();
+    backgroundImage();
     strokeWeight(appHeight/100);
     stroke(blue);
     line(appWidth/3, 0, appWidth/3, appHeight);
