@@ -22,10 +22,21 @@ void backgroundWhiteScreen() {
   stroke(1);
 }
 void backgroundImage() {
+  imagePopulation();
   if (nightMode==false) {
     tint(dayModeTint, dayModeOpacity); //Day Mode, see ternary operator
   } else {
     tint(nightModeTint, nightModeOpacity); //Night Mode, see ternary operator
   }
   image(backgroundImage, backgroundX, backgroundY, backgroundWidth, backgroundHeight);
+}
+void ORGrid() {
+  strokeWeight(appHeight/100);
+  stroke(blue);
+  line(appWidth/3, 0, appWidth/3, appHeight);
+  line(appWidth*2/3, 0, appWidth*2/3, appHeight);
+  stroke(red);
+  line(0, appHeight/3, appWidth, appHeight/3);
+  line(0, appHeight*2/3, appWidth, appHeight*2/3);
+  noStroke();
 }

@@ -12,10 +12,14 @@ void population() {
   textY = startButtonY;
   textWidth = startButtonWidth;
   textHeight = startButtonHeight;
-  backgroundX = 0;
-  backgroundY = 0;
+  backgroundX = appWidth * 0;
+  backgroundY = appHeight * 0;
   backgroundWidth = appWidth;
   backgroundHeight = appHeight;
+  PS5ButtonWidth = appWidth/12;
+  PS5ButtonHeight = appHeight/12;
+  PS5ButtonX = 0;
+  PS5ButtonY = appHeight/6-PS5ButtonHeight/2;
   blue = color (0, 0, 255);
   red = color (255, 0, 0);
   purple = color (150, 0, 255);

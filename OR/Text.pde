@@ -16,6 +16,6 @@ void spaceBarText() {
   rect(textX, textY, textWidth, textHeight);
   textFont(font1);
   fill(purple);
-  String spaceBar = "PRESS E TO CONTINUE";
+  String spaceBar = "PRESS SPACE TO CONTINUE";
   text(spaceBar, textX, textY, textWidth, textHeight);
 }
