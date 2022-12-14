@@ -15,20 +15,12 @@ void homeScreen() {
    - Note: must have one image with aspect ratio
    */
 }
-void backgroundWhiteScreen() {
-  fill(255);
-  noStroke();
-  rect(backgroundX, backgroundY, backgroundWidth, backgroundHeight);
-  stroke(1);
-}
 void backgroundImage() {
-  imagePopulation();
-  if (nightMode==false) {
-    tint(dayModeTint, dayModeOpacity); //Day Mode, see ternary operator
-  } else {
+  nightModeTint();
+  image(backgroundImage, backgroundX, backgroundY, backgroundWidth, backgroundHeight);
+  if (nightMode) {
     tint(nightModeTint, nightModeOpacity); //Night Mode, see ternary operator
   }
-  image(backgroundImage, backgroundX, backgroundY, backgroundWidth, backgroundHeight);
 }
 void ORGrid() {
   strokeWeight(appHeight/100);

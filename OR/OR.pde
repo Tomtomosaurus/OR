@@ -1,5 +1,4 @@
 int appWidth, appHeight;
-color blue, red, purple, yellow;
 Boolean OS=false, startProgram=false;
 void setup() {
   size(displayWidth, displayHeight);
@@ -8,10 +7,14 @@ void setup() {
   appHeight = height;
   display();
   population();
+  imagePopulation();
   textSetup();
+  colourSetupPopulation();
 }
 void draw() {
+  colourDrawPopulation();
   if (OS) {
+    backgroundImage();
     splashScreen();
   } else {
     backgroundWhiteScreen();
@@ -25,9 +28,18 @@ void draw() {
 }
 void mousePressed() {
   if (OS==false && startProgram==false) OS=true;
+  if (OS && mouseX>=quitButtonX && mouseY >=quitButtonY && mouseX <= quitButtonX+quitButtonWidth && mouseY <=quitButtonY+quitButtonHeight) exit();
 }
 void keyPressed() {
   if (OS && key==' ') {
     startProgram=true;
     OS=false;
   }
+  if (OS || startProgram && key=='n' || key=='N') {
+    if (nightMode==true) {
+      nightMode=false;
+    } else {
+      nightMode=true;
+    }
+  }
+}

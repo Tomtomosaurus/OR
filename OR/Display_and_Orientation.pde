@@ -1,4 +1,3 @@
-
 String displayOrientation, brokenOrNot, turnPhunOrNot;
 int smallerDimension, largerDimension;
 

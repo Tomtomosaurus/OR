@@ -1,11 +1,16 @@
 float splashScreenX, splashScreenY, splashScreenWidth, splashScreenHeight;
 float startButtonX, startButtonY, startButtonWidth, startButtonHeight;
+float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 
 void splashScreen() {
-  background(255);
-  fill(0);
+  noTint();
+  ORGrid();
+  fill(blue);
   rect(splashScreenX, splashScreenY, splashScreenWidth, splashScreenHeight);
-  fill(255);
+  fill(purple);
   rect(startButtonX, startButtonY, startButtonWidth, startButtonHeight);
   spaceBarText();
+  fill(red);
+  rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+  quitButtonText();
 }
