@@ -13,11 +13,11 @@ void colourSetupPopulation() {
 
 void colourDrawPopulation() {
   if (nightMode) {
-    choosingButtonColour = 0;
+    choosingButtonColour = 255;
     choosingButtonColourInverted = 0;
     quitTextColour = 0;
   } else {
-    choosingButtonColour = 255;
+    choosingButtonColour = 0;
     choosingButtonColourInverted = 255;
     quitTextColour = 0;
   }
