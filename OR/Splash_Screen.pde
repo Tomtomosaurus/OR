@@ -10,7 +10,4 @@ void splashScreen() {
   fill(purple);
   rect(startButtonX, startButtonY, startButtonWidth, startButtonHeight);
   spaceBarText();
-  fill(red);
-  rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
-  quitButtonText();
 }

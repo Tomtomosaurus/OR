@@ -24,11 +24,12 @@ void draw() {
     backgroundImage();
     ORGrid();
     choosingTime();
+    quitButton();
   }
 }
 void mousePressed() {
   if (OS==false && startProgram==false) OS=true;
-  if (OS && mouseX>=quitButtonX && mouseY >=quitButtonY && mouseX <= quitButtonX+quitButtonWidth && mouseY <=quitButtonY+quitButtonHeight) exit();
+  if (startProgram && mouseX>=quitButtonX && mouseY >=quitButtonY && mouseX <= quitButtonX+quitButtonWidth && mouseY <=quitButtonY+quitButtonHeight) exit();
 }
 void keyPressed() {
   if (OS && key==' ') {
