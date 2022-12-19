@@ -19,8 +19,10 @@ void spaceBarText() {
   text(startText, startTextX+appWidth/30, startTextY, startTextWidth, startTextHeight);
 }
 void quitButtonText() {
+  color ink = (nightMode) ? yellow : purple ;
   textFont(font1);
-  fill(quitTextColour);
-  String quitText = "QUIT";
+  fill(ink);
+  String quitText = "  QUIT";
   text(quitText, quitButtonX+quitButtonWidth/2-appHeight/17, quitButtonY+quitButtonHeight/2-appHeight/40, quitButtonWidth, quitButtonHeight);
+  noFill();
 }

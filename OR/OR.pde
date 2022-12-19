@@ -14,17 +14,25 @@ void setup() {
 void draw() {
   colourDrawPopulation();
   if (OS) {
+    nightModeTint();
     backgroundImage();
     splashScreen();
   } else {
     backgroundWhiteScreen();
   }
   if (startProgram) {
-    homeScreen();
+    //homeScreen();
+    nightModeTint();
     backgroundImage();
     ORGrid();
     choosingTime();
     quitButton();
+    if (mouseX>=quitButtonX && mouseX <= quitButtonX+quitButtonWidth && mouseY >=quitButtonY && mouseY <= quitButtonY+quitButtonHeight) {
+      quitButtonImage();
+      cursor(HAND);
+    } else {
+      cursor(ARROW);
+    }
   }
 }
 void mousePressed() {

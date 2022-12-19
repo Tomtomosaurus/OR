@@ -1,5 +1,5 @@
 String displayOrientation, brokenOrNot, turnPhunOrNot;
-int smallerDimension, largerDimension;
+float smallerDimension, largerDimension;
 
 void display() {
   if (appWidth >= appHeight) {

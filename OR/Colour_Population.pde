@@ -6,7 +6,7 @@ void colourSetupPopulation() {
   purple = color (150, 0, 255);
   yellow = color (255, 255, 0);
   dayModeTint = color(255, 255, 255);
-  dayModeOpacity = 50;
+  dayModeOpacity = 255;
   nightModeTint = color(64, 64, 0);
   nightModeOpacity = 255;
 }

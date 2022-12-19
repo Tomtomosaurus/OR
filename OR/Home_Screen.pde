@@ -36,5 +36,4 @@ void quitButton() {
   fill(red);
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
   quitButtonText();
-  if (mouseX >= quitButtonX && mouseX >= quitButtonY && mouseX <= quitButtonX+quitButtonWidth && mouseY <= quitButtonY+quitButtonWidth) quitButtonImage();
 }
