@@ -1,7 +1,10 @@
 PImage backgroundImage, quitButtonImage;
 float quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight;
+PImage PS5, XSX;
 void imagePopulation() {
   backgroundImage = loadImage ("../Images/backgroundImage.jpg");
+  PS5 = loadImage("../Images/PS5.jpeg");
+  XSX = loadImage("../Images/XSX.jpg");
 }
 void quitButtonImage() {
   noFill();
