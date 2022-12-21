@@ -5,6 +5,7 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
+
 Minim minim;
 AudioPlayer song1;
 void setup() {
@@ -13,4 +14,6 @@ void setup() {
   song1 = minim.loadFile("Sounds/homedepotthemesong.mp3");
   song1.play();
   song1.loop(1);
+}
+void draw() {
 }

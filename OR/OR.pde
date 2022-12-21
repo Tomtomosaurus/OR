@@ -14,7 +14,7 @@ void setup() {
   size(displayWidth, displayHeight);
   fullScreen();
   minim = new Minim(this);
-  song1 = minim.loadFile("../Sounds/reduceReuseEcyceMeme.mp3");
+  song1 = minim.loadFile("../Sounds/homedepotthemesong.mp3");
   appWidth = width;
   appHeight = height;
   display();
