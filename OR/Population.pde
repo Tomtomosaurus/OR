@@ -28,4 +28,8 @@ void population() {
   quitButtonImageRectHeight = quitButtonHeight;
   quitButtonImageRectX = quitButtonX;
   quitButtonImageRectY = quitButtonY;
+  XSXButtonWidth = PS5ButtonWidth;
+  XSXButtonHeight = PS5ButtonHeight;
+  XSXButtonX = appWidth/3-XSXButtonWidth;
+  XSXButtonY = PS5ButtonY;
 }
