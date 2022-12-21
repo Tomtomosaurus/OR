@@ -14,8 +14,7 @@ void setup() {
   size(displayWidth, displayHeight);
   fullScreen();
   minim = new Minim(this);
-  song1 = minim.loadFile("../Sounds/reduce reuse ecyce meme.mp3");
-  song1.play();
+  song1 = minim.loadFile("../Sounds/reduceReuseEcyceMeme.mp3");
   appWidth = width;
   appHeight = height;
   display();
@@ -72,4 +71,5 @@ void keyPressed() {
       nightMode=true;
     }
   }
+  if (key==' ') song1.play();
 }
