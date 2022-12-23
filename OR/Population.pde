@@ -35,6 +35,14 @@ void population() {
   songBarX = 0;
   songBarY = appHeight*24/25;
   songBarHeight = appHeight/25;
+  AppleButtonWidth = PS5ButtonWidth;
+  AppleButtonHeight = PS5ButtonHeight;
+  AppleButtonX = appWidth/3+5;
+  AppleButtonY = appHeight/6-AppleButtonHeight/2;
+  AndroidButtonWidth = PS5ButtonWidth;
+  AndroidButtonHeight = PS5ButtonHeight;
+  AndroidButtonX = appWidth*2/3-AndroidButtonWidth;
+  AndroidButtonY = appHeight/6-AndroidButtonHeight/2;
 }
 void drawPopulation() {
   if (song1.isPlaying()) {

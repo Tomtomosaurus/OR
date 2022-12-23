@@ -1,4 +1,4 @@
-color blue, red, purple, yellow, green, PS5ButtonColour, XSXButtonColour, choosingButtonColourInverted, quitTextColour;
+color blue, red, purple, yellow, green, PS5ButtonColour, XSXButtonColour, AppleButtonColour, AndroidButtonColour, choosingButtonColourInverted, quitTextColour;
 
 void colourSetupPopulation() {
   blue = color (0, 0, 255);
@@ -34,6 +34,16 @@ void colourDrawPopulation() {
     XSXButtonColour = 0;
   } else {
     XSXButtonColour = 255;
+  }
+  if (mouseX>=AppleButtonX && mouseY>=AppleButtonY && mouseX<=AppleButtonX+AppleButtonWidth && mouseY<=AppleButtonY+AppleButtonHeight) {
+    AppleButtonColour = 255;
+  } else {
+    AppleButtonColour = 0;
+  }
+  if (mouseX>=AndroidButtonX && mouseY>=AndroidButtonY && mouseX<=AndroidButtonX+AndroidButtonWidth && mouseY<=AndroidButtonY+AndroidButtonHeight) {
+    AndroidButtonColour = 255;
+  } else {
+    AndroidButtonColour = 0;
   }
 }
 void nightModeTint() {
