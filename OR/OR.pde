@@ -13,7 +13,6 @@ Boolean OS=false, startProgram=false, song=true;
 void setup() {
   size(displayWidth, displayHeight);
   fullScreen();
-  frameRate(999999999);
   minim = new Minim(this);
   song1 = minim.loadFile("../Sounds/Pentatonix - Carol of the Bells.mp3");
   song2 = minim.loadFile("../Sounds/home depot theme song.mp3");
