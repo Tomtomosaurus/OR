@@ -15,7 +15,7 @@ void setup() {
   fullScreen();
   frameRate(999999999);
   minim = new Minim(this);
-  song1 = minim.loadFile("../Sounds/Carol of the Bells (Original) Lyrics.mp3");
+  song1 = minim.loadFile("../Sounds/Pentatonix - Carol of the Bells.mp3");
   song2 = minim.loadFile("../Sounds/home depot theme song.mp3");
   appWidth = width;
   appHeight = height;
@@ -77,13 +77,9 @@ void keyPressed() {
     }
   }
   if (key==' ' && startProgram) {
-    if (song1.isPlaying()) {
-    } else {
-      if (song2.isPlaying()) {
-      } else {
-        song1.play();
-        song1.loop(-1);
-      }
+    if (song1.isPlaying()==false && song2.isPlaying()==false) {
+      song1.play();
+      song1.loop(-1);
     }
   }
   //if (key=='l' || key=='L') song1.loop(-1); <-- songs already looped
