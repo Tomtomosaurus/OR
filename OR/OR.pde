@@ -9,7 +9,7 @@ Minim minim;
 AudioPlayer song1, song2;
 
 int appWidth, appHeight;
-Boolean OS=false, startProgram=false;
+Boolean OS=false, startProgram=false, song=true;
 void setup() {
   size(displayWidth, displayHeight);
   fullScreen();
@@ -55,11 +55,11 @@ void draw() {
 void mousePressed() {
   if (OS==false && startProgram==false) OS=true;
   if (startProgram && mouseX>=quitButtonX && mouseY >=quitButtonY && mouseX <= quitButtonX+quitButtonWidth && mouseY <=quitButtonY+quitButtonHeight) exit();
-  if (mouseX>=PS5ButtonX && mouseY>=PS5ButtonY && mouseX<=PS5ButtonX+PS5ButtonWidth && mouseY<=PS5ButtonY+PS5ButtonHeight) {
+  if (mouseX>=PS5ButtonX && mouseY>=PS5ButtonY && mouseX<=PS5ButtonX+PS5ButtonWidth && mouseY<=PS5ButtonY+PS5ButtonHeight && XSXIncorrect==false && PS5Correct==false) {
     PS5Correct=true;
     XSXIncorrect=false;
   }
-  if (mouseX>=XSXButtonX && mouseY>=XSXButtonY && mouseX<=XSXButtonX+XSXButtonWidth && mouseY<=XSXButtonY+XSXButtonHeight) {
+  if (mouseX>=XSXButtonX && mouseY>=XSXButtonY && mouseX<=XSXButtonX+XSXButtonWidth && mouseY<=XSXButtonY+XSXButtonHeight &&  XSXIncorrect==false && PS5Correct==false) {
     XSXIncorrect=true;
     PS5Correct=false;
   }
@@ -104,6 +104,7 @@ void keyPressed() {
     }
   }
   if (key==CODED && keyCode==UP && startProgram && song2.isPlaying()) {
+    song=true;
     song2.pause();
     song2.rewind();
     song1.unmute();
@@ -111,22 +112,26 @@ void keyPressed() {
     song1.loop(-1);
   }
   if (key==CODED && keyCode==DOWN && startProgram && song1.isPlaying()) {
+    song=false;
     song1.pause();
     song1.rewind();
     song2.unmute();
     song2.play();
     song2.loop(-1);
   }
-  if (key=='p' && key=='P') {
-    if (song1.isPlaying() && song2.isPlaying()==false) {
-      song1.pause();
-    } else if (song2.isPlaying()==false) {
-      song1.play();
-    }
-    if (song2.isPlaying() && song1.isPlaying()==false) {
-      song2.pause();
-    } else if (song1.isPlaying()==false) {
-      song2.play();
+  if (key=='p' || key=='P') {
+    if (song) {
+      if (song1.isPlaying()) {
+        song1.pause();
+      } else {
+        song1.play();
+      }
+    } else {
+      if (song2.isPlaying()) {
+        song2.pause();
+      } else {
+        song2.play();
+      }
     }
   }
   if (key=='m' || key=='M' && startProgram) {
