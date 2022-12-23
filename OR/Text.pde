@@ -5,8 +5,8 @@ void textSetup() {
   //printArray(fontList);
   //Minimum Expectation = one font
   //Do more than one font!!!!!!!!!!!!
-  font1 = createFont("NotoSerifMyanmar-Black", 30);
-  font2 = createFont("NotoSerifMyanmar-Black", 17.5);
+  font1 = createFont("Arial", 30);
+  font2 = createFont("Lucida Console", 17.5);
   font3 = createFont("Wingdings", 10);
 }
 void spaceBarText() {

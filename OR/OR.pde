@@ -13,6 +13,7 @@ Boolean OS=false, startProgram=false;
 void setup() {
   size(displayWidth, displayHeight);
   fullScreen();
+  frameRate(999999999);
   minim = new Minim(this);
   song1 = minim.loadFile("../Sounds/Carol of the Bells (Original) Lyrics.mp3");
   song2 = minim.loadFile("../Sounds/home depot theme song.mp3");
@@ -48,6 +49,8 @@ void draw() {
       cursor(ARROW);
     }
   }
+  song1Bar();
+  debugging();
 }
 void mousePressed() {
   if (OS==false && startProgram==false) OS=true;
@@ -73,8 +76,17 @@ void keyPressed() {
       nightMode=true;
     }
   }
-  if (key==' ' && startProgram) song1.play();
-  if (key=='l' || key=='L') song1.loop(-1);
+  if (key==' ' && startProgram) {
+    if (song1.isPlaying()) {
+    } else {
+      if (song2.isPlaying()) {
+      } else {
+        song1.play();
+        song1.loop(-1);
+      }
+    }
+  }
+  //if (key=='l' || key=='L') song1.loop(-1); <-- songs already looped
   if (key==CODED && keyCode==RIGHT && startProgram) {
     if (song1.isPlaying()) {
       song1.skip(5000);
@@ -105,6 +117,18 @@ void keyPressed() {
     song2.play();
     song2.loop(-1);
   }
+  if (key=='p' && key=='P') {
+    if (song1.isPlaying() && song2.isPlaying()==false) {
+      song1.pause();
+    } else if (song2.isPlaying()==false) {
+      song1.play();
+    }
+    if (song2.isPlaying() && song1.isPlaying()==false) {
+      song2.pause();
+    } else if (song1.isPlaying()==false) {
+      song2.play();
+    }
+  }
   if (key=='m' || key=='M' && startProgram) {
     if (song1.isPlaying()) {
       if (song1.isMuted()) {
@@ -121,24 +145,22 @@ void keyPressed() {
       }
     }
   }
-  if (key=='p' && key=='P') {
-    if (song1.isPlaying()) {
-      song1.pause();
-    } else {
-      song1.play();
-    }
-    if (song2.isPlaying()) {
-      song2.pause();
-    } else {
-      song2.play();
-    }
-  }
   if (key=='r' || key=='R' && startProgram) {
     if (song1.isPlaying()) {
       song1.pause();
       song1.rewind();
-    } else {
+      song1.play();
+    } else if (song2.isPlaying()==false) {
       song1.rewind();
+      song1.play();
+    }
+    if (song2.isPlaying()) {
+      song2.pause();
+      song2.rewind();
+      song2.play();
+    } else if (song1.isPlaying()==false) {
+      song2.rewind();
+      song2.play();
     }
   }
 }

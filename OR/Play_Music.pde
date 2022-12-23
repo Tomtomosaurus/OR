@@ -1,6 +1,13 @@
-float songBarX, songBarY, songBarWidth, songBarHeight;
+float songBarX, songBarY, song1BarWidth, song2BarWidth, songBarHeight;
 
-void songLengthBar() {
-  fill(red);
-  rect(songBarX, songBarY, songBarWidth, songBarHeight);
+void song1Bar() {
+  if (song1.isPlaying()) {
+    fill(blue);
+    rect(songBarX, songBarY, song1BarWidth, songBarHeight);
+    noFill();
+  }
+  if (song2.isPlaying()) {
+    fill(red);
+    rect(songBarX, songBarY, song2BarWidth, songBarHeight);
+  }
 }

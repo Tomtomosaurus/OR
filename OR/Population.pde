@@ -33,9 +33,14 @@ void population() {
   XSXButtonX = appWidth/3-XSXButtonWidth;
   XSXButtonY = PS5ButtonY;
   songBarX = 0;
-  songBarY = appWidth*9/10;
-  songBarHeight = 10;
+  songBarY = appHeight*24/25;
+  songBarHeight = appHeight/25;
 }
 void drawPopulation() {
-  songBarWidth = song1.position()/appWidth;
+  if (song1.isPlaying()) {
+    song1BarWidth = appWidth*song1.position()/song1.length()*2;
+  }
+  if (song2.isPlaying()) {
+    song2BarWidth = appWidth*song2.position()/song2.length()*2;
+  }
 }
