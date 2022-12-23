@@ -6,7 +6,7 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
 Minim minim;
-AudioPlayer song1;
+AudioPlayer song1, song2;
 
 int appWidth, appHeight;
 Boolean OS=false, startProgram=false;
@@ -14,7 +14,8 @@ void setup() {
   size(displayWidth, displayHeight);
   fullScreen();
   minim = new Minim(this);
-  song1 = minim.loadFile("../Sounds/homedepotthemesong.mp3");
+  song1 = minim.loadFile("../Sounds/Carol of the Bells (Original) Lyrics.mp3");
+  song2 = minim.loadFile("../Sounds/home depot theme song.mp3");
   appWidth = width;
   appHeight = height;
   display();
@@ -25,6 +26,7 @@ void setup() {
 }
 void draw() {
   colourDrawPopulation();
+  drawPopulation();
   if (OS) {
     nightModeTint();
     backgroundImage();
@@ -71,5 +73,72 @@ void keyPressed() {
       nightMode=true;
     }
   }
-  if (key==' ') song1.play();
+  if (key==' ' && startProgram) song1.play();
+  if (key=='l' || key=='L') song1.loop(-1);
+  if (key==CODED && keyCode==RIGHT && startProgram) {
+    if (song1.isPlaying()) {
+      song1.skip(5000);
+    }
+    if (song2.isPlaying()) {
+      song2.skip(5000);
+    }
+  }
+  if (key==CODED && keyCode==LEFT && startProgram) {
+    if (song1.isPlaying()) {
+      song1.skip(-5000);
+    }
+    if (song2.isPlaying()) {
+      song2.skip(-5000);
+    }
+  }
+  if (key==CODED && keyCode==UP && startProgram && song2.isPlaying()) {
+    song2.pause();
+    song2.rewind();
+    song1.unmute();
+    song1.play();
+    song1.loop(-1);
+  }
+  if (key==CODED && keyCode==DOWN && startProgram && song1.isPlaying()) {
+    song1.pause();
+    song1.rewind();
+    song2.unmute();
+    song2.play();
+    song2.loop(-1);
+  }
+  if (key=='m' || key=='M' && startProgram) {
+    if (song1.isPlaying()) {
+      if (song1.isMuted()) {
+        song1.unmute();
+      } else {
+        song1.mute();
+      }
+    }
+    if (song2.isPlaying()) {
+      if (song2.isMuted()) {
+        song2.unmute();
+      } else {
+        song2.mute();
+      }
+    }
+  }
+  if (key=='p' && key=='P') {
+    if (song1.isPlaying()) {
+      song1.pause();
+    } else {
+      song1.play();
+    }
+    if (song2.isPlaying()) {
+      song2.pause();
+    } else {
+      song2.play();
+    }
+  }
+  if (key=='r' || key=='R' && startProgram) {
+    if (song1.isPlaying()) {
+      song1.pause();
+      song1.rewind();
+    } else {
+      song1.rewind();
+    }
+  }
 }
