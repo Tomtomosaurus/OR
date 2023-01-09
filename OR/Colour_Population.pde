@@ -1,4 +1,4 @@
-color blue, red, purple, yellow, green, PS5ButtonColour, XSXButtonColour, AppleButtonColour, AndroidButtonColour, choosingButtonColourInverted, quitTextColour;
+color blue, red, purple, yellow, green, quitTextColour;
 
 void colourSetupPopulation() {
   blue = color (0, 0, 255);
