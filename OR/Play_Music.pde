@@ -55,12 +55,18 @@ void songKeyPressedCommands() {
     if (song) {
       if (song1.isPlaying()) {
         song1.pause();
+      } else if (song1.position()>= song1.length()*4/5) {
+        song1.rewind();
+        song1.play();
       } else {
         song1.play();
       }
     } else {
       if (song2.isPlaying()) {
         song2.pause();
+      } else if (song2.position()>= song2.length()*4/5) {
+        song2.rewind();
+        song2.play();
       } else {
         song2.play();
       }

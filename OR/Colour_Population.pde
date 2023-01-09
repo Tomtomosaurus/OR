@@ -45,6 +45,16 @@ void colourDrawPopulation() {
   } else {
     AndroidButtonColour = 0;
   }
+  if (mouseX>=lightMouseButtonX && mouseY>=lightMouseButtonY && mouseX<=lightMouseButtonX+lightMouseButtonWidth && mouseY<=lightMouseButtonY+lightMouseButtonHeight) {
+    lightMouseButtonColour = 255;
+  } else {
+    lightMouseButtonColour = 0;
+  }
+  if (mouseX>=heavyMouseButtonX && mouseY>=heavyMouseButtonY && mouseX<=heavyMouseButtonX+heavyMouseButtonWidth && mouseY<=heavyMouseButtonY+heavyMouseButtonHeight) {
+    heavyMouseButtonColour = 255;
+  } else {
+    heavyMouseButtonColour = 0;
+  }
 }
 void nightModeTint() {
   if (nightMode==false) {

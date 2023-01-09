@@ -25,11 +25,11 @@ void choosingTime() {
     rect(AndroidButtonX, AndroidButtonY, AndroidButtonWidth, AndroidButtonHeight);
     if (AndroidIncorrect) {
       fill(red);
-      rect(appWidth/3+5, 0, appWidth/3-5, appHeight/3-5);
+      rect(appWidth/3+5, 0, appWidth/3-10, appHeight/3-5);
     }
     if (AppleCorrect) {
       fill(green);
-      rect(appWidth/3+5, 0, appWidth/3-5, appHeight/3-5);
+      rect(appWidth/3+5, 0, appWidth/3-10, appHeight/3-5);
       //
       fill(lightMouseButtonColour);
       rect(lightMouseButtonX, lightMouseButtonY, lightMouseButtonWidth, lightMouseButtonHeight);
@@ -37,11 +37,11 @@ void choosingTime() {
       rect(heavyMouseButtonX, heavyMouseButtonY, heavyMouseButtonWidth, heavyMouseButtonHeight);
       if (lightMouseIncorrect) {
         fill(red);
-        rect(appWidth*2/3, 0, appWidth/3, appHeight/3-5);
+        rect(appWidth*2/3+5, 0, appWidth/3-5, appHeight/3-5);
       }
       if (heavyMouseCorrect) {
         fill(green);
-        rect(appWidth*2/3, 0, appWidth/3, appHeight/3-5);
+        rect(appWidth*2/3+5, 0, appWidth/3-5, appHeight/3-5);
         //
         fill(AMDButtonColour);
         rect(AMDButtonX, AMDButtonY, AMDButtonWidth, AMDButtonHeight);
@@ -49,11 +49,11 @@ void choosingTime() {
         rect(NvidiaButtonX, NvidiaButtonY, NvidiaButtonWidth, NvidiaButtonHeight);
         if (NvidiaIncorrect) {
           fill(red);
-          rect(0, appHeight/3+5, appWidth/3-5, appHeight/3-5);
+          rect(0, appHeight/3+5, appWidth/3-5, appHeight/3-10);
         }
         if (AMDCorrect) {
           fill(green);
-          rect(0, appHeight/3+5, appWidth/3-5, appHeight/3-5);
+          rect(0, appHeight/3+5, appWidth/3-5, appHeight/3-10);
           //
           fill(twelveHourTimeButtonColour);
           rect(twelveHourTimeButtonX, twelveHourTimeButtonY, twelveHourTimeButtonWidth, twelveHourTimeButtonHeight);
@@ -82,7 +82,7 @@ void choosingTime() {
               fill(soccerButtonColour);
               rect(soccerButtonX, soccerButtonY, soccerButtonWidth, soccerButtonHeight);
               fill(footballButtonColour);
-              rect(footballButtonX, footballButtonY, footBallButtonWidth, footBallButtonHeight);
+              rect(footballButtonX, footballButtonY, footballButtonWidth, footballButtonHeight);
               if (soccerIncorrect) {
                 fill(red);
                 rect(0, appHeight*2/3+5, appWidth/3-5, appHeight/3);
