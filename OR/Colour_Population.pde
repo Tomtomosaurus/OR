@@ -55,6 +55,66 @@ void colourDrawPopulation() {
   } else {
     heavyMouseButtonColour = 0;
   }
+  if (mouseX>=NvidiaButtonX && mouseY>=NvidiaButtonY && mouseX<=NvidiaButtonX+NvidiaButtonWidth && mouseY<=NvidiaButtonY+NvidiaButtonHeight) {
+    NvidiaButtonColour = 255;
+  } else {
+    NvidiaButtonColour = 0;
+  }
+  if (mouseX>=AMDButtonX && mouseY>=AMDButtonY && mouseX<=AMDButtonX+AMDButtonWidth && mouseY<=AMDButtonY+AMDButtonHeight) {
+    AMDButtonColour = 255;
+  } else {
+    AMDButtonColour = 0;
+  }
+  if (mouseX>=twelveHourTimeButtonX && mouseY>=twelveHourTimeButtonY && mouseX<=twelveHourTimeButtonX+twelveHourTimeButtonWidth && mouseY<=twelveHourTimeButtonY+twelveHourTimeButtonHeight) {
+    twelveHourTimeButtonColour = 255;
+  } else {
+    twelveHourTimeButtonColour = 0;
+  }
+  if (mouseX>=twentyFourHourTimeButtonX && mouseY>=twentyFourHourTimeButtonY && mouseX<=twentyFourHourTimeButtonX+twentyFourHourTimeButtonWidth && mouseY<=twentyFourHourTimeButtonY+twentyFourHourTimeButtonHeight) {
+    twentyFourHourTimeButtonColour = 255;
+  } else {
+    twentyFourHourTimeButtonColour = 0;
+  }
+  if (mouseX>=CocaColaButtonX && mouseY>=CocaColaButtonY && mouseX<=CocaColaButtonX+CocaColaButtonWidth && mouseY<=CocaColaButtonY+CocaColaButtonHeight) {
+    CocaColaButtonColour = 255;
+  } else {
+    CocaColaButtonColour = 0;
+  }
+  if (mouseX>=PepsiButtonX && mouseY>=PepsiButtonY && mouseX<=PepsiButtonX+PepsiButtonWidth && mouseY<=PepsiButtonY+PepsiButtonHeight) {
+    PepsiButtonColour = 255;
+  } else {
+    PepsiButtonColour = 0;
+  }
+  if (mouseX>=soccerButtonX && mouseY>=soccerButtonY && mouseX<=soccerButtonX+soccerButtonWidth && mouseY<=soccerButtonY+soccerButtonHeight) {
+    soccerButtonColour = 255;
+  } else {
+    soccerButtonColour = 0;
+  }
+  if (mouseX>=footballButtonX && mouseY>=footballButtonY && mouseX<=footballButtonX+footballButtonWidth && mouseY<=footballButtonY+footballButtonHeight) {
+    footballButtonColour = 255;
+  } else {
+    footballButtonColour = 0;
+  }
+  if (mouseX>=sixteenByTenButtonX && mouseY>=sixteenByTenButtonY && mouseX<=sixteenByTenButtonX+sixteenByTenButtonWidth && mouseY<=sixteenByTenButtonY+sixteenByTenButtonHeight) {
+    sixteenByTenButtonColour = 255;
+  } else {
+    sixteenByTenButtonColour = 0;
+  }
+  if (mouseX>=eightByFiveButtonX && mouseY>=eightByFiveButtonY && mouseX<=eightByFiveButtonX+eightByFiveButtonWidth && mouseY<=eightByFiveButtonY+eightByFiveButtonHeight) {
+    eightByFiveButtonColour = 255;
+  } else {
+    eightByFiveButtonColour = 0;
+  }
+  if (mouseX>=NikeButtonX && mouseY>=NikeButtonY && mouseX<=NikeButtonX+NikeButtonWidth && mouseY<=NikeButtonY+NikeButtonHeight) {
+    NikeButtonColour = 255;
+  } else {
+    NikeButtonColour = 0;
+  }
+  if (mouseX>=AdidasButtonX && mouseY>=AdidasButtonY && mouseX<=AdidasButtonX+AdidasButtonWidth && mouseY<=AdidasButtonY+AdidasButtonHeight) {
+    AdidasButtonColour = 255;
+  } else {
+    AdidasButtonColour = 0;
+  }
 }
 void nightModeTint() {
   if (nightMode==false) {

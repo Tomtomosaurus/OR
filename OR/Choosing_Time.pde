@@ -61,11 +61,11 @@ void choosingTime() {
           rect(twentyFourHourTimeButtonX, twentyFourHourTimeButtonY, twentyFourHourTimeButtonWidth, twentyFourHourTimeButtonHeight);
           if (twelveHourTimeIncorrect) {
             fill(red);
-            rect(appWidth/3+5, appHeight/3+5, appWidth/3-5, appHeight/3-5);
+            rect(appWidth/3+5, appHeight/3+5, appWidth/3-10, appHeight/3-10);
           }
           if (twentyFourHourTimeCorrect) {
             fill(green);
-            rect(appWidth/3+5, appHeight/3+5, appWidth/3-5, appHeight/3-5);
+            rect(appWidth/3+5, appHeight/3+5, appWidth/3-10, appHeight/3-10);
             //
             fill(CocaColaButtonColour);
             rect(CocaColaButtonX, CocaColaButtonY, CocaColaButtonWidth, CocaColaButtonHeight);
@@ -73,11 +73,11 @@ void choosingTime() {
             rect(PepsiButtonX, PepsiButtonY, PepsiButtonWidth, PepsiButtonHeight);
             if (PepsiIncorrect) {
               fill(red);
-              rect(appWidth*2/3+5, appHeight/3+5, appWidth/3-5, appHeight/3-5);
+              rect(appWidth*2/3+5, appHeight/3+5, appWidth/3-5, appHeight/3-10);
             }
             if (CocaColaCorrect) {
               fill(green);
-              rect(appWidth*2/3+5, appHeight/3+5, appWidth/3-5, appHeight/3-5);
+              rect(appWidth*2/3+5, appHeight/3+5, appWidth/3-5, appHeight/3-10);
               //
               fill(soccerButtonColour);
               rect(soccerButtonX, soccerButtonY, soccerButtonWidth, soccerButtonHeight);
@@ -97,11 +97,11 @@ void choosingTime() {
                 rect(eightByFiveButtonX, eightByFiveButtonY, eightByFiveButtonWidth, eightByFiveButtonHeight);
                 if (sixteenByTenIncorrect) {
                   fill(red);
-                  rect(appWidth/3+5, appHeight*2/3+5, appWidth/3-5, appHeight/3);
+                  rect(appWidth/3+5, appHeight*2/3+5, appWidth/3-10, appHeight/3);
                 }
                 if (eightByFiveCorrect) {
                   fill(green);
-                  rect(appWidth/3+5, appHeight*2/3+5, appWidth/3-5, appHeight/3);
+                  rect(appWidth/3+5, appHeight*2/3+5, appWidth/3-10, appHeight/3);
                   //
                   fill(NikeButtonColour);
                   rect(NikeButtonX, NikeButtonY, NikeButtonWidth, NikeButtonHeight);
