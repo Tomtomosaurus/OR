@@ -23,7 +23,7 @@ void population() {
   quitButtonWidth = appWidth/20;
   quitButtonHeight = appHeight/20;
   quitButtonX = appWidth-quitButtonWidth;
-  quitButtonY = appHeight-quitButtonHeight;
+  quitButtonY = 0;
   quitButtonImageRectWidth = quitButtonWidth;
   quitButtonImageRectHeight = quitButtonHeight;
   quitButtonImageRectX = quitButtonX;

@@ -23,6 +23,6 @@ void quitButtonText() {
   textFont(font1);
   fill(ink);
   String quitText = "X";
-  text(quitText, quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+  text(quitText, quitButtonX+appWidth/50, quitButtonY+appHeight/100, quitButtonWidth-appWidth/50, quitButtonHeight-appHeight/100);
   noFill();
 }
