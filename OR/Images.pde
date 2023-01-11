@@ -1,10 +1,12 @@
 PImage backgroundImage, quitButtonImage;
 float quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight;
-PImage PS5, XSX;
+PImage PS5, XSX, AppleLogo, AndroidLogo;
 void imagePopulation() {
   backgroundImage = loadImage ("../Images/backgroundImage.jpg");
   PS5 = loadImage("../Images/PS5.jpeg");
   XSX = loadImage("../Images/XSX.jpg");
+  AppleLogo = loadImage("../Images/AppleLogo.png");
+  AndroidLogo = loadImage("../Images/AndroidLogo.png");
 }
 void quitButtonImage() {
   noFill();

@@ -107,3 +107,78 @@ void songKeyPressedCommands() {
     }
   }
 }
+
+void songMousePressedCommands() {
+  if (mouseX>=XSXButtonX && mouseY>=XSXButtonY && mouseX<=XSXButtonX+XSXButtonWidth && mouseY<=XSXButtonY+XSXButtonHeight &&  XSXIncorrect==false && PS5Correct==false) {
+    incorrectSoundEffect.play();
+    incorrectSoundEffect.rewind();
+  }
+  if (mouseX>=PS5ButtonX && mouseY>=PS5ButtonY && mouseX<=PS5ButtonX+PS5ButtonWidth && mouseY<=PS5ButtonY+PS5ButtonHeight && XSXIncorrect==false && PS5Correct==false) {
+    correctSoundEffect.play();
+    correctSoundEffect.rewind();
+  }
+  if (XSXIncorrect==false && PS5Correct && mouseX>=AndroidButtonX && mouseY>=AndroidButtonY && mouseX<=AndroidButtonX+AndroidButtonWidth && mouseY<=AndroidButtonY+AndroidButtonHeight) {
+    incorrectSoundEffect.play();
+    incorrectSoundEffect.rewind();
+  }
+  if (XSXIncorrect==false && PS5Correct && mouseX>=AppleButtonX && mouseY>=AppleButtonY && mouseX<=AppleButtonX+AppleButtonWidth && mouseY<=AppleButtonY+AppleButtonHeight) {
+    correctSoundEffect.play();
+    correctSoundEffect.rewind();
+  }
+  if (AndroidIncorrect==false && AppleCorrect && mouseX>=lightMouseButtonX && mouseY>=lightMouseButtonY && mouseX<=lightMouseButtonX+lightMouseButtonWidth && mouseY<=lightMouseButtonY+lightMouseButtonHeight) {
+    incorrectSoundEffect.play();
+    incorrectSoundEffect.rewind();
+  }
+  if (AndroidIncorrect==false && AppleCorrect && mouseX>=heavyMouseButtonX && mouseY>=heavyMouseButtonY && mouseX<=heavyMouseButtonX+heavyMouseButtonWidth && mouseY<=heavyMouseButtonY+heavyMouseButtonHeight) {
+    correctSoundEffect.play();
+    correctSoundEffect.rewind();
+  }
+  if (lightMouseIncorrect==false && heavyMouseCorrect && mouseX>=NvidiaButtonX && mouseY>=NvidiaButtonY && mouseX<=NvidiaButtonX+NvidiaButtonWidth && mouseY<=NvidiaButtonY+NvidiaButtonHeight) {
+    incorrectSoundEffect.play();
+    incorrectSoundEffect.rewind();
+  }
+  if (lightMouseIncorrect==false && heavyMouseCorrect && mouseX>=AMDButtonX && mouseY>=AMDButtonY && mouseX<=AMDButtonX+AMDButtonWidth && mouseY<=AMDButtonY+AMDButtonHeight) {
+    correctSoundEffect.play();
+    correctSoundEffect.rewind();
+  }
+  if (NvidiaIncorrect==false && AMDCorrect && mouseX>=twelveHourTimeButtonX && mouseY>=twelveHourTimeButtonY && mouseX<=twelveHourTimeButtonX+twelveHourTimeButtonWidth && mouseY<=twelveHourTimeButtonY+twelveHourTimeButtonHeight) {
+    incorrectSoundEffect.play();
+    incorrectSoundEffect.rewind();
+  }
+  if (NvidiaIncorrect==false && AMDCorrect && mouseX>=twentyFourHourTimeButtonX && mouseY>=twentyFourHourTimeButtonY && mouseX<=twentyFourHourTimeButtonX+twentyFourHourTimeButtonWidth && mouseY<=twentyFourHourTimeButtonY+twentyFourHourTimeButtonHeight) {
+    correctSoundEffect.play();
+    correctSoundEffect.rewind();
+  }
+  if (twelveHourTimeIncorrect==false && twentyFourHourTimeCorrect && mouseX>=PepsiButtonX && mouseY>=PepsiButtonY && mouseX<=PepsiButtonX+PepsiButtonWidth && mouseY<=PepsiButtonY+PepsiButtonHeight) {
+    incorrectSoundEffect.play();
+    incorrectSoundEffect.rewind();
+  }
+  if (twelveHourTimeIncorrect==false && twentyFourHourTimeCorrect && mouseX>=CocaColaButtonX && mouseY>=CocaColaButtonY && mouseX<=CocaColaButtonX+CocaColaButtonWidth && mouseY<=CocaColaButtonY+CocaColaButtonHeight) {
+    correctSoundEffect.play();
+    correctSoundEffect.rewind();
+  }
+  if (PepsiIncorrect==false && CocaColaCorrect && mouseX>=soccerButtonX && mouseY>=soccerButtonY && mouseX<=soccerButtonX+soccerButtonWidth && mouseY<=soccerButtonY+soccerButtonHeight) {
+    incorrectSoundEffect.play();
+    incorrectSoundEffect.rewind();
+  }
+  if (PepsiIncorrect==false && CocaColaCorrect && mouseX>=footballButtonX && mouseY>=footballButtonY && mouseX<=footballButtonX+footballButtonWidth && mouseY<=footballButtonY+footballButtonHeight) {
+    correctSoundEffect.play();
+    correctSoundEffect.rewind();
+  }
+  if (soccerIncorrect==false && footballCorrect && mouseX>=sixteenByTenButtonX && mouseY>=sixteenByTenButtonY && mouseX<=sixteenByTenButtonX+sixteenByTenButtonWidth && mouseY<=sixteenByTenButtonY+sixteenByTenButtonHeight) {
+    incorrectSoundEffect.play();
+    incorrectSoundEffect.rewind();
+  }
+  if (soccerIncorrect==false && footballCorrect && mouseX>=eightByFiveButtonX && mouseY>=eightByFiveButtonY && mouseX<=eightByFiveButtonX+eightByFiveButtonWidth && mouseY<=eightByFiveButtonY+eightByFiveButtonHeight) {
+    correctSoundEffect.play();
+    correctSoundEffect.rewind();
+  }
+  if (sixteenByTenIncorrect==false && eightByFiveCorrect && mouseX>=NikeButtonX && mouseY>=NikeButtonY && mouseX<=NikeButtonX+NikeButtonWidth && mouseY<=NikeButtonX+NikeButtonHeight) {
+    incorrectSoundEffect.play();
+    incorrectSoundEffect.rewind();
+  }
+  if (sixteenByTenIncorrect==false && eightByFiveCorrect && mouseX>=AdidasButtonX && mouseY>=AdidasButtonY && mouseX<=AdidasButtonX+AdidasButtonWidth && mouseY<=AdidasButtonX+AdidasButtonHeight) {
+    correctSoundEffect.play();
+    correctSoundEffect.rewind();
+  }
+}
