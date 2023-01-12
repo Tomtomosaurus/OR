@@ -14,10 +14,10 @@ void setup() {
   size(displayWidth, displayHeight);
   fullScreen();
   minim = new Minim(this);
-  song1 = minim.loadFile("../Sounds/Pentatonix - Carol of the Bells.mp3");
+  song1 = minim.loadFile("../Sounds/Carol of the Bells (Original) Lyrics.mp3");
   song2 = minim.loadFile("../Sounds/home depot theme song.mp3");
   correctSoundEffect = minim.loadFile("../Sounds/CorrectSoundEffect.mp3");
-  incorrectSoundEffect = minim.loadFile("../Sounds/IncorrectSoundEffect.mp3");
+  incorrectSoundEffect = minim.loadFile("../Sounds/Spongebob Disappointed Sound Effect.mp3");
   appWidth = width;
   appHeight = height;
   display();
@@ -42,6 +42,7 @@ void draw() {
     backgroundImage();
     ORGrid();
     choosingTime();
+    buttonSoundEffectsCommands();
     quitButton();
     if (mouseX>=quitButtonX && mouseX <= quitButtonX+quitButtonWidth && mouseY >=quitButtonY && mouseY <= quitButtonY+quitButtonHeight) {
       quitButtonImage();
@@ -57,7 +58,6 @@ void mousePressed() {
   if (OS==false && startProgram==false) OS=true;
   if (startProgram && mouseX>=quitButtonX && mouseY >=quitButtonY && mouseX <= quitButtonX+quitButtonWidth && mouseY <=quitButtonY+quitButtonHeight) exit();
   mousePressedChoosing();
-  songMousePressedCommands();
 }
 void keyPressed() {
   if (OS && key==' ') {
@@ -91,5 +91,9 @@ void keyPressed() {
     eightByFiveCorrect=false;
     NikeIncorrect=false;
     AdidasCorrect=false;
+    correctSoundEffect.pause();
+    correctSoundEffect.rewind();
+    incorrectSoundEffect.pause();
+    incorrectSoundEffect.rewind();
   }
 }

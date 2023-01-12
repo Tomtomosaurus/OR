@@ -12,8 +12,6 @@ void choosingTime() {
     fill(red);
     rect(0, 0, appWidth/3-5, appHeight/3-5);
     noTint();
-    incorrectSoundEffect.play();
-    incorrectSoundEffect.rewind();
   }
   if (PS5Correct) {
     tint(10, 255, 255, 255);
