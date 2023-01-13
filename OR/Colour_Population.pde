@@ -103,14 +103,14 @@ void colourDrawPopulation() {
       eightByFiveButtonColour = 0;
     }
     if (mouseX>=NikeButtonX && mouseY>=NikeButtonY && mouseX<=NikeButtonX+NikeButtonWidth && mouseY<=NikeButtonY+NikeButtonHeight) {
-      NikeButtonColour = 255;
-    } else {
       NikeButtonColour = 0;
+    } else {
+      NikeButtonColour = 255;
     }
     if (mouseX>=AdidasButtonX && mouseY>=AdidasButtonY && mouseX<=AdidasButtonX+AdidasButtonWidth && mouseY<=AdidasButtonY+AdidasButtonHeight) {
-      AdidasButtonColour = 255;
-    } else {
       AdidasButtonColour = 0;
+    } else {
+      AdidasButtonColour = 255;
     }
     choosingButtonColourInverted = 255;
     quitTextColour = 0;

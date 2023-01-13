@@ -161,6 +161,8 @@ void choosingTime() {
                   fill(green, 127.5);
                   rect(appWidth/3+5, appHeight*2/3+5, appWidth/3-10, appHeight/3);
                   //
+                  image (NikeLogo, appWidth*2/3+5, appHeight*2/3+5, appWidth/6-5, appHeight/3-5);
+                  image (AdidasLogo, appWidth*5/6, appHeight*2/3+5, appWidth/6, appHeight/3-5);
                   if (AdidasCorrect==false && NikeIncorrect==false) {
                     strokeWeight (appHeight/200);
                     stroke(0);

@@ -19,6 +19,8 @@ void imagePopulation() {
   footballBall = loadImage("../Images/footballBall.png");
   sixteenByTen = loadImage("../Images/16-10.png");
   eightByFive = loadImage("../Images/8-5.png");
+  AdidasLogo = loadImage("../Images/AdidasLogo.png");
+  NikeLogo = loadImage("../Images/NikeLogo.png");
 }
 void quitButtonImage() {
   noFill();

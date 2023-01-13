@@ -1,8 +1,8 @@
 float startTextX, startTextY, startTextWidth, startTextHeight;
 PFont font1, font2, font3;
 void textSetup() {
-  //String[] fontList = PFont.list();
-  //printArray(fontList);
+  String[] fontList = PFont.list();
+  printArray(fontList);
   //Minimum Expectation = one font
   //Do more than one font!!!!!!!!!!!!
   font1 = createFont("Arial", 30);
