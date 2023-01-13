@@ -1,12 +1,24 @@
 PImage backgroundImage, quitButtonImage;
 float quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight;
-PImage PS5, XSX, AppleLogo, AndroidLogo;
+PImage PS5, XSX, AppleLogo, AndroidLogo, heavyMouse, lightMouse, AMDGPU, NvidiaGPU, twelveHourTime, twentyFourHourTime, CocaColaCan, PepsiCan, soccerBall, footballBall, sixteenByTen, eightByFive, AdidasLogo, NikeLogo;
 void imagePopulation() {
   backgroundImage = loadImage ("../Images/backgroundImage.jpg");
-  PS5 = loadImage("../Images/PS5.jpeg");
-  XSX = loadImage("../Images/XSX.jpg");
+  PS5 = loadImage("../Images/PS5.png");
+  XSX = loadImage("../Images/XSX.png");
   AppleLogo = loadImage("../Images/AppleLogo.png");
   AndroidLogo = loadImage("../Images/AndroidLogo.png");
+  heavyMouse = loadImage("../Images/heavyMouse.png");
+  lightMouse = loadImage("../Images/lightMouse.png");
+  AMDGPU = loadImage("../Images/AMDGPU.png");
+  NvidiaGPU = loadImage("../Images/NvidiaGPU.png");
+  twelveHourTime = loadImage("../Images/12HourTime.png");
+  twentyFourHourTime = loadImage("../Images/24HourTime.png");
+  CocaColaCan = loadImage("../Images/CocaColaCan.png");
+  PepsiCan = loadImage("../Images/PepsiCan.png");
+  soccerBall = loadImage("../Images/soccerBall.png");
+  footballBall = loadImage("../Images/footballBall.png");
+  sixteenByTen = loadImage("../Images/16-10.png");
+  eightByFive = loadImage("../Images/8-5.png");
 }
 void quitButtonImage() {
   noFill();

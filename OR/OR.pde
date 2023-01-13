@@ -11,7 +11,7 @@ AudioPlayer song1, song2, correctSoundEffect, incorrectSoundEffect;
 int appWidth, appHeight;
 Boolean OS=false, startProgram=false, song=true;
 void setup() {
-  size(displayWidth, displayHeight);
+  size(displayWidth, displayHeight); //doesn't actually do anything since it's over-written by fullscreen. Same resolution, different type of window. Funnily enough, having both size(); and fullScreen(); only works in Processing 4.X.X, not 3.X.X. If you try to put both size(); and fullScreen(); in the same code in Processing 3, it'll give you an error saying that you can't have both.
   fullScreen();
   minim = new Minim(this);
   song1 = minim.loadFile("../Sounds/Carol of the Bells (Original) Lyrics.mp3");
@@ -42,7 +42,6 @@ void draw() {
     backgroundImage();
     ORGrid();
     choosingTime();
-    buttonSoundEffectsCommands();
     quitButton();
     if (mouseX>=quitButtonX && mouseX <= quitButtonX+quitButtonWidth && mouseY >=quitButtonY && mouseY <= quitButtonY+quitButtonHeight) {
       quitButtonImage();
@@ -85,8 +84,8 @@ void keyPressed() {
     twentyFourHourTimeCorrect=false;
     CocaColaCorrect=false;
     PepsiIncorrect=false;
-    soccerIncorrect=false;
-    footballCorrect=false;
+    soccerCorrect=false;
+    footballIncorrect=false;
     sixteenByTenIncorrect=false;
     eightByFiveCorrect=false;
     NikeIncorrect=false;

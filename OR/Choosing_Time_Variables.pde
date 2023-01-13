@@ -22,7 +22,7 @@ Boolean lightMouseIncorrect=false, heavyMouseCorrect=false;
 Boolean AMDCorrect=false, NvidiaIncorrect=false;
 Boolean twelveHourTimeIncorrect=false, twentyFourHourTimeCorrect=false;
 Boolean CocaColaCorrect=false, PepsiIncorrect=false;
-Boolean soccerIncorrect=false, footballCorrect=false;
+Boolean footballIncorrect=false, soccerCorrect=false;
 Boolean sixteenByTenIncorrect=false, eightByFiveCorrect=false;
 Boolean NikeIncorrect=false, AdidasCorrect=false;
 color PS5ButtonColour, XSXButtonColour;

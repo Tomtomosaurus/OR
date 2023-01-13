@@ -1,120 +1,182 @@
 void choosingTime() {
+  strokeWeight (appHeight/200);
+  stroke(0);
+  image(PS5, 0, 0, appWidth/6, appHeight/3-5);
+  image(XSX, appWidth/6, 0, appWidth/6-5, appHeight/3-5);
   if (PS5Correct==false && XSXIncorrect==false) {
-    image(PS5, 0, 0, appWidth/6, appHeight/3-5);
-    image(XSX, appWidth/6, 0, appWidth/6-5, appHeight/3-5);
-    fill(PS5ButtonColour);
+    fill(PS5ButtonColour, 127.5);
     rect(PS5ButtonX, PS5ButtonY, PS5ButtonWidth, PS5ButtonHeight);
-    fill(XSXButtonColour);
+    fill(XSXButtonColour, 127.5);
     rect(XSXButtonX, XSXButtonY, XSXButtonWidth, XSXButtonHeight);
   }
   if (XSXIncorrect) {
-    tint(10, 255, 255, 255);
-    fill(red);
+    noStroke();
+    fill(red, 127.5);
     rect(0, 0, appWidth/3-5, appHeight/3-5);
-    noTint();
   }
   if (PS5Correct) {
-    tint(10, 255, 255, 255);
-    fill(green);
+    noStroke();
+    fill(green, 127.5);
     rect(0, 0, appWidth/3-5, appHeight/3-5);
-    noTint();
     //
+    strokeWeight (appHeight/200);
+    stroke(0);
     image(AppleLogo, appWidth/3+5, 0, appWidth/6-5, appHeight/3-5);
     image(AndroidLogo, appWidth/3+appWidth/6, 0, appWidth/6-5, appHeight/3-5);
-    fill(AppleButtonColour);
-    rect(AppleButtonX, AppleButtonY, AppleButtonWidth, AppleButtonHeight);
-    fill(AndroidButtonColour);
-    rect(AndroidButtonX, AndroidButtonY, AndroidButtonWidth, AndroidButtonHeight);
+    if (AppleCorrect==false && AndroidIncorrect==false) {
+      fill(AppleButtonColour, 127.5);
+      rect(AppleButtonX, AppleButtonY, AppleButtonWidth, AppleButtonHeight);
+      fill(AndroidButtonColour, 127.5);
+      rect(AndroidButtonX, AndroidButtonY, AndroidButtonWidth, AndroidButtonHeight);
+    }
     if (AndroidIncorrect) {
-      fill(red);
+      noStroke();
+      fill(red, 127.5);
       rect(appWidth/3+5, 0, appWidth/3-10, appHeight/3-5);
     }
     if (AppleCorrect) {
-      fill(green);
+      noStroke();
+      fill(green, 127.5);
       rect(appWidth/3+5, 0, appWidth/3-10, appHeight/3-5);
       //
-      fill(lightMouseButtonColour);
-      rect(lightMouseButtonX, lightMouseButtonY, lightMouseButtonWidth, lightMouseButtonHeight);
-      fill(heavyMouseButtonColour);
-      rect(heavyMouseButtonX, heavyMouseButtonY, heavyMouseButtonWidth, heavyMouseButtonHeight);
+      strokeWeight (appHeight/200);
+      stroke(0);
+      image (lightMouse, appWidth*2/3+5, 0, appWidth/6-5, appHeight/3-5);
+      image (heavyMouse, appWidth*5/6, 0, appWidth/6, appHeight/3);
+      if (heavyMouseCorrect==false && lightMouseIncorrect==false) {
+        fill(lightMouseButtonColour, 127.5);
+        rect(lightMouseButtonX, lightMouseButtonY, lightMouseButtonWidth, lightMouseButtonHeight);
+        fill(heavyMouseButtonColour, 127.5);
+        rect(heavyMouseButtonX, heavyMouseButtonY, heavyMouseButtonWidth, heavyMouseButtonHeight);
+      }
       if (lightMouseIncorrect) {
-        fill(red);
+        noStroke();
+        fill(red, 127.5);
         rect(appWidth*2/3+5, 0, appWidth/3-5, appHeight/3-5);
       }
       if (heavyMouseCorrect) {
-        fill(green);
+        noStroke();
+        fill(green, 127.5);
         rect(appWidth*2/3+5, 0, appWidth/3-5, appHeight/3-5);
         //
-        fill(AMDButtonColour);
-        rect(AMDButtonX, AMDButtonY, AMDButtonWidth, AMDButtonHeight);
-        fill(NvidiaButtonColour);
-        rect(NvidiaButtonX, NvidiaButtonY, NvidiaButtonWidth, NvidiaButtonHeight);
+        strokeWeight (appHeight/200);
+        stroke(0);
+        image (AMDGPU, 0, appHeight/3+5, appWidth/6, appHeight/3-10);
+        image (NvidiaGPU, appWidth/6, appHeight/3+5, appWidth/6-5, appHeight/3-10);
+        if (AMDCorrect==false && NvidiaIncorrect==false) {
+          fill(AMDButtonColour, 127.5);
+          rect(AMDButtonX, AMDButtonY, AMDButtonWidth, AMDButtonHeight);
+          fill(NvidiaButtonColour, 127.5);
+          rect(NvidiaButtonX, NvidiaButtonY, NvidiaButtonWidth, NvidiaButtonHeight);
+        }
         if (NvidiaIncorrect) {
-          fill(red);
+          noStroke();
+          fill(red, 127.5);
           rect(0, appHeight/3+5, appWidth/3-5, appHeight/3-10);
         }
         if (AMDCorrect) {
-          fill(green);
+          noStroke();
+          fill(green, 127.5);
           rect(0, appHeight/3+5, appWidth/3-5, appHeight/3-10);
           //
-          fill(twelveHourTimeButtonColour);
-          rect(twelveHourTimeButtonX, twelveHourTimeButtonY, twelveHourTimeButtonWidth, twelveHourTimeButtonHeight);
-          fill(twentyFourHourTimeButtonColour);
-          rect(twentyFourHourTimeButtonX, twentyFourHourTimeButtonY, twentyFourHourTimeButtonWidth, twentyFourHourTimeButtonHeight);
+          fill(255, 127.5);
+          rect (appWidth/3+5, appHeight/3+5, appWidth/3-10, appHeight/3-10);
+          strokeWeight (appHeight/200);
+          stroke(0);
+          image (twelveHourTime, appWidth/3+5, appHeight/3+5, appWidth/6-5, appHeight/3-10);
+          image (twentyFourHourTime, appWidth/2, appHeight/3+5, appWidth/6-5, appHeight/3-10);
+          if (twentyFourHourTimeCorrect==false && twelveHourTimeIncorrect==false) {
+            fill(twelveHourTimeButtonColour, 127.5);
+            rect(twelveHourTimeButtonX, twelveHourTimeButtonY, twelveHourTimeButtonWidth, twelveHourTimeButtonHeight);
+            fill(twentyFourHourTimeButtonColour, 127.5);
+            rect(twentyFourHourTimeButtonX, twentyFourHourTimeButtonY, twentyFourHourTimeButtonWidth, twentyFourHourTimeButtonHeight);
+          }
           if (twelveHourTimeIncorrect) {
-            fill(red);
+            noStroke();
+            fill(red, 127.5);
             rect(appWidth/3+5, appHeight/3+5, appWidth/3-10, appHeight/3-10);
           }
           if (twentyFourHourTimeCorrect) {
-            fill(green);
+            noStroke();
+            fill(green, 127.5);
             rect(appWidth/3+5, appHeight/3+5, appWidth/3-10, appHeight/3-10);
             //
-            fill(CocaColaButtonColour);
-            rect(CocaColaButtonX, CocaColaButtonY, CocaColaButtonWidth, CocaColaButtonHeight);
-            fill(PepsiButtonColour);
-            rect(PepsiButtonX, PepsiButtonY, PepsiButtonWidth, PepsiButtonHeight);
+            strokeWeight (appHeight/200);
+            stroke(0);
+            image (CocaColaCan, appWidth*2/3+5, appHeight/3+5, appWidth/6-5, appHeight/3-10);
+            image (PepsiCan, appWidth*5/6, appHeight/3+5, appWidth/6, appHeight/3-10);
+            if (CocaColaCorrect==false && PepsiIncorrect==false) {
+              fill(CocaColaButtonColour, 127.5);
+              rect(CocaColaButtonX, CocaColaButtonY, CocaColaButtonWidth, CocaColaButtonHeight);
+              fill(PepsiButtonColour, 127.5);
+              rect(PepsiButtonX, PepsiButtonY, PepsiButtonWidth, PepsiButtonHeight);
+            }
             if (PepsiIncorrect) {
-              fill(red);
+              noStroke();
+              fill(red, 127.5);
               rect(appWidth*2/3+5, appHeight/3+5, appWidth/3-5, appHeight/3-10);
             }
             if (CocaColaCorrect) {
-              fill(green);
+              noStroke();
+              fill(green, 127.5);
               rect(appWidth*2/3+5, appHeight/3+5, appWidth/3-5, appHeight/3-10);
               //
-              fill(soccerButtonColour);
-              rect(soccerButtonX, soccerButtonY, soccerButtonWidth, soccerButtonHeight);
-              fill(footballButtonColour);
-              rect(footballButtonX, footballButtonY, footballButtonWidth, footballButtonHeight);
-              if (soccerIncorrect) {
-                fill(red);
+              image(soccerBall, 0, appHeight*2/3+5, appWidth/6, appHeight/3-5);
+              image(footballBall, appWidth/6, appHeight*2/3+5, appWidth/6-5, appHeight/3-5);
+              if (footballIncorrect==false && soccerCorrect==false) {
+                strokeWeight (appHeight/200);
+                stroke(0);
+                fill(soccerButtonColour, 127.5);
+                rect(soccerButtonX, soccerButtonY, soccerButtonWidth, soccerButtonHeight);
+                fill(footballButtonColour, 127.5);
+                rect(footballButtonX, footballButtonY, footballButtonWidth, footballButtonHeight);
+              }
+              if (footballIncorrect) {
+                noStroke();
+                fill(red, 127.5);
                 rect(0, appHeight*2/3+5, appWidth/3-5, appHeight/3);
               }
-              if (footballCorrect) {
-                fill(green);
+              if (soccerCorrect) {
+                noStroke();
+                fill(green, 127.5);
                 rect(0, appHeight*2/3+5, appWidth/3-5, appHeight/3);
                 //
-                fill(sixteenByTenButtonColour);
-                rect(sixteenByTenButtonX, sixteenByTenButtonY, sixteenByTenButtonWidth, sixteenByTenButtonHeight);
-                fill(eightByFiveButtonColour);
-                rect(eightByFiveButtonX, eightByFiveButtonY, eightByFiveButtonWidth, eightByFiveButtonHeight);
+                image (sixteenByTen, appWidth/3+5, appHeight*2/3+5, appWidth/6-5, appHeight/3-5);
+                image (eightByFive, appWidth/2, appHeight*2/3+5, appWidth/6-5, appHeight/3-5);
+                if (eightByFiveCorrect==false && sixteenByTenIncorrect==false) {
+                  strokeWeight (appHeight/200);
+                  stroke(0);
+                  fill(sixteenByTenButtonColour, 127.5);
+                  rect(sixteenByTenButtonX, sixteenByTenButtonY, sixteenByTenButtonWidth, sixteenByTenButtonHeight);
+                  fill(eightByFiveButtonColour, 127.5);
+                  rect(eightByFiveButtonX, eightByFiveButtonY, eightByFiveButtonWidth, eightByFiveButtonHeight);
+                }
                 if (sixteenByTenIncorrect) {
-                  fill(red);
+                  noStroke();
+                  fill(red, 127.5);
                   rect(appWidth/3+5, appHeight*2/3+5, appWidth/3-10, appHeight/3);
                 }
                 if (eightByFiveCorrect) {
-                  fill(green);
+                  noStroke();
+                  fill(green, 127.5);
                   rect(appWidth/3+5, appHeight*2/3+5, appWidth/3-10, appHeight/3);
                   //
-                  fill(NikeButtonColour);
-                  rect(NikeButtonX, NikeButtonY, NikeButtonWidth, NikeButtonHeight);
-                  fill(AdidasButtonColour);
-                  rect(AdidasButtonX, AdidasButtonY, AdidasButtonWidth, AdidasButtonHeight);
+                  if (AdidasCorrect==false && NikeIncorrect==false) {
+                    strokeWeight (appHeight/200);
+                    stroke(0);
+                    fill(NikeButtonColour, 127.5);
+                    rect(NikeButtonX, NikeButtonY, NikeButtonWidth, NikeButtonHeight);
+                    fill(AdidasButtonColour, 127.5);
+                    rect(AdidasButtonX, AdidasButtonY, AdidasButtonWidth, AdidasButtonHeight);
+                  }
                   if (NikeIncorrect) {
-                    fill(red);
+                    noStroke();
+                    fill(red, 127.5);
                     rect(appWidth*2/3+5, appHeight*2/3+5, appWidth/3, appHeight/3);
                   }
                   if (AdidasCorrect) {
-                    fill(green);
+                    noStroke();
+                    fill(green, 127.5);
                     rect(appWidth*2/3+5, appHeight*2/3+5, appWidth/3, appHeight/3);
                   }
                 }
@@ -125,78 +187,149 @@ void choosingTime() {
       }
     }
   }
+  noStroke();
 }
 void mousePressedChoosing() {
   if (mouseX>=XSXButtonX && mouseY>=XSXButtonY && mouseX<=XSXButtonX+XSXButtonWidth && mouseY<=XSXButtonY+XSXButtonHeight &&  XSXIncorrect==false && PS5Correct==false) {
     XSXIncorrect=true;
     PS5Correct=false;
+    song1.pause();
+    song1.rewind();
+    song2.pause();
+    song2.rewind();
+    incorrectSoundEffect.play();
   }
   if (mouseX>=PS5ButtonX && mouseY>=PS5ButtonY && mouseX<=PS5ButtonX+PS5ButtonWidth && mouseY<=PS5ButtonY+PS5ButtonHeight && XSXIncorrect==false && PS5Correct==false) {
     XSXIncorrect=false;
     PS5Correct=true;
+    correctSoundEffect.play();
   }
   if (XSXIncorrect==false && PS5Correct==true && mouseX>=AndroidButtonX && mouseY>=AndroidButtonY && mouseX<=AndroidButtonX+AndroidButtonWidth && mouseY<=AndroidButtonY+AndroidButtonHeight) {
     AndroidIncorrect=true;
     AppleCorrect=false;
+    song1.pause();
+    song1.rewind();
+    song2.pause();
+    song2.rewind();
+    incorrectSoundEffect.play();
   }
   if (XSXIncorrect==false && PS5Correct==true && mouseX>=AppleButtonX && mouseY>=AppleButtonY && mouseX<=AppleButtonX+AppleButtonWidth && mouseY<=AppleButtonY+AppleButtonHeight) {
     AndroidIncorrect=false;
     AppleCorrect=true;
+    correctSoundEffect.pause();
+    correctSoundEffect.rewind();
+    correctSoundEffect.play();
   }
   if (AndroidIncorrect==false && AppleCorrect==true && mouseX>=lightMouseButtonX && mouseY>=lightMouseButtonY && mouseX<=lightMouseButtonX+lightMouseButtonWidth && mouseY<=lightMouseButtonY+lightMouseButtonHeight) {
     lightMouseIncorrect=true;
     heavyMouseCorrect=false;
+    song1.pause();
+    song1.rewind();
+    song2.pause();
+    song2.rewind();
+    incorrectSoundEffect.play();
   }
   if (AndroidIncorrect==false && AppleCorrect==true && mouseX>=heavyMouseButtonX && mouseY>=heavyMouseButtonY && mouseX<=heavyMouseButtonX+heavyMouseButtonWidth && mouseY<=heavyMouseButtonY+heavyMouseButtonHeight) {
     lightMouseIncorrect=false;
     heavyMouseCorrect=true;
+    correctSoundEffect.pause();
+    correctSoundEffect.rewind();
+    correctSoundEffect.play();
   }
   if (lightMouseIncorrect==false && heavyMouseCorrect==true && mouseX>=NvidiaButtonX && mouseY>=NvidiaButtonY && mouseX<=NvidiaButtonX+NvidiaButtonWidth && mouseY<=NvidiaButtonY+NvidiaButtonHeight) {
     NvidiaIncorrect=true;
     AMDCorrect=false;
+    song1.pause();
+    song1.rewind();
+    song2.pause();
+    song2.rewind();
+    incorrectSoundEffect.play();
   }
   if (lightMouseIncorrect==false && heavyMouseCorrect==true && mouseX>=AMDButtonX && mouseY>=AMDButtonY && mouseX<=AMDButtonX+AMDButtonWidth && mouseY<=AMDButtonY+AMDButtonHeight) {
     NvidiaIncorrect=false;
     AMDCorrect=true;
+    correctSoundEffect.pause();
+    correctSoundEffect.rewind();
+    correctSoundEffect.play();
   }
   if (NvidiaIncorrect==false && AMDCorrect==true && mouseX>=twelveHourTimeButtonX && mouseY>=twelveHourTimeButtonY && mouseX<=twelveHourTimeButtonX+twelveHourTimeButtonWidth && mouseY<=twelveHourTimeButtonY+twelveHourTimeButtonHeight) {
     twelveHourTimeIncorrect=true;
     twentyFourHourTimeCorrect=false;
+    song1.pause();
+    song1.rewind();
+    song2.pause();
+    song2.rewind();
+    incorrectSoundEffect.play();
   }
   if (NvidiaIncorrect==false && AMDCorrect==true && mouseX>=twentyFourHourTimeButtonX && mouseY>=twentyFourHourTimeButtonY && mouseX<=twentyFourHourTimeButtonX+twentyFourHourTimeButtonWidth && mouseY<=twentyFourHourTimeButtonY+twentyFourHourTimeButtonHeight) {
     twelveHourTimeIncorrect=false;
     twentyFourHourTimeCorrect=true;
+    correctSoundEffect.pause();
+    correctSoundEffect.rewind();
+    correctSoundEffect.play();
   }
   if (twelveHourTimeIncorrect==false && twentyFourHourTimeCorrect && mouseX>=PepsiButtonX && mouseY>=PepsiButtonY && mouseX<=PepsiButtonX+PepsiButtonWidth && mouseY<=PepsiButtonY+PepsiButtonHeight) {
     PepsiIncorrect=true;
     CocaColaCorrect=false;
+    song1.pause();
+    song1.rewind();
+    song2.pause();
+    song2.rewind();
+    incorrectSoundEffect.play();
   }
   if (twelveHourTimeIncorrect==false && twentyFourHourTimeCorrect && mouseX>=CocaColaButtonX && mouseY>=CocaColaButtonY && mouseX<=CocaColaButtonX+CocaColaButtonWidth && mouseY<=CocaColaButtonY+CocaColaButtonHeight) {
     PepsiIncorrect=false;
     CocaColaCorrect=true;
-  }
-  if (PepsiIncorrect==false && CocaColaCorrect && mouseX>=soccerButtonX && mouseY>=soccerButtonY && mouseX<=soccerButtonX+soccerButtonWidth && mouseY<=soccerButtonY+soccerButtonHeight) {
-    soccerIncorrect=true;
-    footballCorrect=false;
+    correctSoundEffect.pause();
+    correctSoundEffect.rewind();
+    correctSoundEffect.play();
   }
   if (PepsiIncorrect==false && CocaColaCorrect && mouseX>=footballButtonX && mouseY>=footballButtonY && mouseX<=footballButtonX+footballButtonWidth && mouseY<=footballButtonY+footballButtonHeight) {
-    soccerIncorrect=false;
-    footballCorrect=true;
+    soccerCorrect=false;
+    footballIncorrect=true;
+    song1.pause();
+    song1.rewind();
+    song2.pause();
+    song2.rewind();
+    incorrectSoundEffect.play();
   }
-  if (soccerIncorrect==false && footballCorrect && mouseX>=sixteenByTenButtonX && mouseY>=sixteenByTenButtonY && mouseX<=sixteenByTenButtonX+sixteenByTenButtonWidth && mouseY<=sixteenByTenButtonY+sixteenByTenButtonHeight) {
+  if (PepsiIncorrect==false && CocaColaCorrect && mouseX>=soccerButtonX && mouseY>=soccerButtonY && mouseX<=soccerButtonX+soccerButtonWidth && mouseY<=soccerButtonY+soccerButtonHeight) {
+    soccerCorrect=true;
+    footballIncorrect=false;
+    correctSoundEffect.pause();
+    correctSoundEffect.rewind();
+    correctSoundEffect.play();
+  }
+  if (footballIncorrect==false && soccerCorrect && mouseX>=sixteenByTenButtonX && mouseY>=sixteenByTenButtonY && mouseX<=sixteenByTenButtonX+sixteenByTenButtonWidth && mouseY<=sixteenByTenButtonY+sixteenByTenButtonHeight) {
     sixteenByTenIncorrect=true;
     eightByFiveCorrect=false;
+    song1.pause();
+    song1.rewind();
+    song2.pause();
+    song2.rewind();
+    incorrectSoundEffect.play();
   }
-  if (soccerIncorrect==false && footballCorrect && mouseX>=eightByFiveButtonX && mouseY>=eightByFiveButtonY && mouseX<=eightByFiveButtonX+eightByFiveButtonWidth && mouseY<=eightByFiveButtonY+eightByFiveButtonHeight) {
+  if (footballIncorrect==false && soccerCorrect && mouseX>=eightByFiveButtonX && mouseY>=eightByFiveButtonY && mouseX<=eightByFiveButtonX+eightByFiveButtonWidth && mouseY<=eightByFiveButtonY+eightByFiveButtonHeight) {
     sixteenByTenIncorrect=false;
     eightByFiveCorrect=true;
+    correctSoundEffect.pause();
+    correctSoundEffect.rewind();
+    correctSoundEffect.play();
   }
   if (sixteenByTenIncorrect==false && eightByFiveCorrect && mouseX>=NikeButtonX && mouseY>=NikeButtonY && mouseX<=NikeButtonX+NikeButtonWidth && mouseY<=NikeButtonX+NikeButtonHeight) {
     NikeIncorrect=true;
     AdidasCorrect=false;
+    song1.pause();
+    song1.rewind();
+    song2.pause();
+    song2.rewind();
+    incorrectSoundEffect.play();
   }
   if (sixteenByTenIncorrect==false && eightByFiveCorrect && mouseX>=AdidasButtonX && mouseY>=AdidasButtonY && mouseX<=AdidasButtonX+AdidasButtonWidth && mouseY<=AdidasButtonX+AdidasButtonHeight) {
     NikeIncorrect=false;
     AdidasCorrect=true;
+    correctSoundEffect.pause();
+    correctSoundEffect.rewind();
+    correctSoundEffect.play();
   }
 }

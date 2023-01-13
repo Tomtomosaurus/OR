@@ -63,14 +63,14 @@ void colourDrawPopulation() {
       AMDButtonColour = 0;
     }
     if (mouseX>=twelveHourTimeButtonX && mouseY>=twelveHourTimeButtonY && mouseX<=twelveHourTimeButtonX+twelveHourTimeButtonWidth && mouseY<=twelveHourTimeButtonY+twelveHourTimeButtonHeight) {
-      twelveHourTimeButtonColour = 255;
-    } else {
       twelveHourTimeButtonColour = 0;
+    } else {
+      twelveHourTimeButtonColour = 255;
     }
     if (mouseX>=twentyFourHourTimeButtonX && mouseY>=twentyFourHourTimeButtonY && mouseX<=twentyFourHourTimeButtonX+twentyFourHourTimeButtonWidth && mouseY<=twentyFourHourTimeButtonY+twentyFourHourTimeButtonHeight) {
-      twentyFourHourTimeButtonColour = 255;
-    } else {
       twentyFourHourTimeButtonColour = 0;
+    } else {
+      twentyFourHourTimeButtonColour = 255;
     }
     if (mouseX>=CocaColaButtonX && mouseY>=CocaColaButtonY && mouseX<=CocaColaButtonX+CocaColaButtonWidth && mouseY<=CocaColaButtonY+CocaColaButtonHeight) {
       CocaColaButtonColour = 255;

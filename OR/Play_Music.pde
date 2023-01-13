@@ -107,23 +107,3 @@ void songKeyPressedCommands() {
     }
   }
 }
-
-void buttonSoundEffectsCommands() {
-  if (XSXIncorrect) {
-    incorrectSoundEffect.play();
-  }
-  if (PS5Correct) {
-    correctSoundEffect.play();
-  }
-  if (AndroidIncorrect) {
-    incorrectSoundEffect.play();
-  }
-  if (AppleCorrect) {
-    if (correctSoundEffect.isPlaying()) {
-      correctSoundEffect.rewind();
-      correctSoundEffect.play();
-    } else {
-      correctSoundEffect.play();
-    }
-  }
-}
