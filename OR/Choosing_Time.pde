@@ -1,5 +1,5 @@
 void choosingTime() {
-  if (OS && startProgram) {
+  if (startProgram) {
     strokeWeight (appHeight/200);
     stroke(0);
     image(PS5, 0, 0, appWidth/6, appHeight/3-5);

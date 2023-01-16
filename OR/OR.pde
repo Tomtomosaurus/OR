@@ -37,7 +37,7 @@ void draw() {
     backgroundWhiteScreen();
   }
   if (startProgram) {
-    //homeScreen();
+    homeScreen();
     nightModeTint();
     backgroundImage();
     ORGrid();
