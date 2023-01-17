@@ -6,7 +6,7 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
 Minim minim;
-AudioPlayer song1, song2, correctSoundEffect, incorrectSoundEffect, EMEME;
+AudioPlayer song1, song2, correctSoundEffect, incorrectSoundEffect, victorySong;
 
 int appWidth, appHeight;
 Boolean OS=false, startProgram=false, song=true;
@@ -18,7 +18,7 @@ void setup() {
   song2 = minim.loadFile("../Sounds/home depot theme song.mp3");
   correctSoundEffect = minim.loadFile("../Sounds/CorrectSoundEffect.mp3");
   incorrectSoundEffect = minim.loadFile("../Sounds/Spongebob Disappointed Sound Effect.mp3");
-  EMEME = minim.loadFile("../Sounds/EMEME.mp3");
+  victorySong = minim.loadFile("../Sounds/02 Title.mp3");
   appWidth = width;
   appHeight = height;
   display();

@@ -1,5 +1,5 @@
 float startTextX, startTextY, startTextWidth, startTextHeight;
-PFont font1, font2, font3, font4, font5;
+PFont font1, font2, font3, font4, font5, font6;
 void textSetup() {
   String[] fontList = PFont.list();
   printArray(fontList);
@@ -8,8 +8,9 @@ void textSetup() {
   font1 = createFont("Arial", 30);
   font2 = createFont("Lucida Console", appHeight/30);
   font3 = createFont("Wingdings", 10);
-  font4 = createFont("ITFDevanagariMarathi-Bold", appHeight/40);
+  font4 = createFont("Verdana Bold Italic", appHeight/40);
   font5 = createFont("ITFDevanagariMarathi-Bold", appHeight/60);
+  font6 = createFont("Verdana Bold Italic", appHeight/15);
 }
 void spaceBarText() {
   stroke(0);

@@ -1,6 +1,6 @@
 PImage backgroundImage, quitButtonImage;
 float quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight;
-PImage PS5, XSX, AppleLogo, AndroidLogo, heavyMouse, lightMouse, AMDGPU, NvidiaGPU, twelveHourTime, twentyFourHourTime, CocaColaCan, PepsiCan, soccerBall, footballBall, sixteenByTen, eightByFive, AdidasLogo, NikeLogo;
+PImage PS5, XSX, AppleLogo, AndroidLogo, heavyMouse, lightMouse, AMDGPU, NvidiaGPU, twelveHourTime, twentyFourHourTime, CocaColaCan, PepsiCan, soccerBall, footballBall, sixteenByTen, eightByFive, AdidasLogo, NikeLogo, confetti;
 void imagePopulation() {
   backgroundImage = loadImage ("../Images/backgroundImage.jpg");
   PS5 = loadImage("../Images/PS5.png");
@@ -21,6 +21,7 @@ void imagePopulation() {
   eightByFive = loadImage("../Images/8-5.png");
   AdidasLogo = loadImage("../Images/AdidasLogo.png");
   NikeLogo = loadImage("../Images/NikeLogo.png");
+  confetti = loadImage("../Images/confetti.png");
 }
 void quitButtonImage() {
   noFill();

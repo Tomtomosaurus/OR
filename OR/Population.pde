@@ -1,4 +1,4 @@
-float centerX=appWidth/2, centerY=appHeight/2;
+float centerX=appWidth/2, centerY=appHeight/2, confettiRandomSize;
 void population() {
   splashScreenX = appWidth/6;
   splashScreenY = appHeight/6;
@@ -99,7 +99,11 @@ void population() {
   AdidasButtonHeight = PS5ButtonHeight;
   AdidasButtonX = heavyMouseButtonX;
   AdidasButtonY = soccerButtonY;
-  
+  confettiRandomSize = random(appHeight/10, appHeight/2);
+  nightModeButtonX = quitButtonX;
+  nightModeButtonY = quitButtonY+quitButtonHeight;
+  nightModeButtonWidth = quitButtonWidth;
+  nightModeButtonHeight = quitButtonHeight;
 }
 void drawPopulation() {
   if (song1.isPlaying()) {

@@ -2,9 +2,10 @@ int backgroundX, backgroundY, backgroundWidth, backgroundHeight;
 color dayModeTint, nightModeTint;
 int dayModeOpacity, nightModeOpacity;
 Boolean nightMode=false;
+float nightModeButtonX, nightModeButtonY, nightModeButtonWidth, nightModeButtonHeight;
 
 void homeScreen() {
-  println("Arrived at Home Screen");
+  //println("Arrived at Home Screen");
   /* Home Screen Expectations
    - Background image using tint()
    - 9 evenly spaced rectangles
@@ -36,4 +37,10 @@ void quitButton() {
   fill(red);
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
   quitButtonText();
+  if (nightMode) {
+    fill(255);
+  } else {
+    fill(0);
+  }
+  rect(nightModeButtonX, nightModeButtonY, nightModeButtonWidth, nightModeButtonHeight);
 }

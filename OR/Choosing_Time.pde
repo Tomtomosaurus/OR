@@ -181,6 +181,15 @@ void choosingTime() {
                       noStroke();
                       fill(green, 127.5);
                       rect(appWidth*2/3+5, appHeight*2/3+5, appWidth/3, appHeight/3);
+                      noFill();
+                      image(confetti, random(0, appWidth), random (0, appHeight), confettiRandomSize, confettiRandomSize);
+                      fill(green);
+                      strokeWeight(appHeight/100);
+                      stroke(0);
+                      rect(appWidth/6, appHeight/6, appWidth*2/3, appHeight*2/3);
+                      textFont(font6);
+                      fill(0);
+                      text("Good Job! Click To Restart", appWidth*21/96, appHeight*11/24, appWidth, appHeight);
                     }
                   }
                 }
@@ -209,7 +218,7 @@ void mousePressedChoosing() {
       PS5Correct=true;
       correctSoundEffect.play();
     }
-    if (XSXIncorrect==false && PS5Correct==true && mouseX>=AndroidButtonX && mouseY>=AndroidButtonY && mouseX<=AndroidButtonX+AndroidButtonWidth && mouseY<=AndroidButtonY+AndroidButtonHeight) {
+    if (XSXIncorrect==false && PS5Correct==true && AndroidIncorrect==false && AppleCorrect==false && mouseX>=AndroidButtonX && mouseY>=AndroidButtonY && mouseX<=AndroidButtonX+AndroidButtonWidth && mouseY<=AndroidButtonY+AndroidButtonHeight) {
       AndroidIncorrect=true;
       AppleCorrect=false;
       song1.pause();
@@ -218,14 +227,14 @@ void mousePressedChoosing() {
       song2.rewind();
       incorrectSoundEffect.play();
     }
-    if (XSXIncorrect==false && PS5Correct==true && mouseX>=AppleButtonX && mouseY>=AppleButtonY && mouseX<=AppleButtonX+AppleButtonWidth && mouseY<=AppleButtonY+AppleButtonHeight) {
+    if (XSXIncorrect==false && PS5Correct==true && AndroidIncorrect==false && AppleCorrect==false && mouseX>=AppleButtonX && mouseY>=AppleButtonY && mouseX<=AppleButtonX+AppleButtonWidth && mouseY<=AppleButtonY+AppleButtonHeight) {
       AndroidIncorrect=false;
       AppleCorrect=true;
       correctSoundEffect.pause();
       correctSoundEffect.rewind();
       correctSoundEffect.play();
     }
-    if (AndroidIncorrect==false && AppleCorrect==true && mouseX>=lightMouseButtonX && mouseY>=lightMouseButtonY && mouseX<=lightMouseButtonX+lightMouseButtonWidth && mouseY<=lightMouseButtonY+lightMouseButtonHeight) {
+    if (AndroidIncorrect==false && AppleCorrect==true && lightMouseIncorrect==false && heavyMouseCorrect==false && mouseX>=lightMouseButtonX && mouseY>=lightMouseButtonY && mouseX<=lightMouseButtonX+lightMouseButtonWidth && mouseY<=lightMouseButtonY+lightMouseButtonHeight) {
       lightMouseIncorrect=true;
       heavyMouseCorrect=false;
       song1.pause();
@@ -234,14 +243,14 @@ void mousePressedChoosing() {
       song2.rewind();
       incorrectSoundEffect.play();
     }
-    if (AndroidIncorrect==false && AppleCorrect==true && mouseX>=heavyMouseButtonX && mouseY>=heavyMouseButtonY && mouseX<=heavyMouseButtonX+heavyMouseButtonWidth && mouseY<=heavyMouseButtonY+heavyMouseButtonHeight) {
+    if (AndroidIncorrect==false && AppleCorrect==true && lightMouseIncorrect==false && heavyMouseCorrect==false && mouseX>=heavyMouseButtonX && mouseY>=heavyMouseButtonY && mouseX<=heavyMouseButtonX+heavyMouseButtonWidth && mouseY<=heavyMouseButtonY+heavyMouseButtonHeight) {
       lightMouseIncorrect=false;
       heavyMouseCorrect=true;
       correctSoundEffect.pause();
       correctSoundEffect.rewind();
       correctSoundEffect.play();
     }
-    if (lightMouseIncorrect==false && heavyMouseCorrect==true && mouseX>=NvidiaButtonX && mouseY>=NvidiaButtonY && mouseX<=NvidiaButtonX+NvidiaButtonWidth && mouseY<=NvidiaButtonY+NvidiaButtonHeight) {
+    if (lightMouseIncorrect==false && heavyMouseCorrect==true && NvidiaIncorrect==false && AMDCorrect==false && mouseX>=NvidiaButtonX && mouseY>=NvidiaButtonY && mouseX<=NvidiaButtonX+NvidiaButtonWidth && mouseY<=NvidiaButtonY+NvidiaButtonHeight) {
       NvidiaIncorrect=true;
       AMDCorrect=false;
       song1.pause();
@@ -250,14 +259,14 @@ void mousePressedChoosing() {
       song2.rewind();
       incorrectSoundEffect.play();
     }
-    if (lightMouseIncorrect==false && heavyMouseCorrect==true && mouseX>=AMDButtonX && mouseY>=AMDButtonY && mouseX<=AMDButtonX+AMDButtonWidth && mouseY<=AMDButtonY+AMDButtonHeight) {
+    if (lightMouseIncorrect==false && heavyMouseCorrect==true && NvidiaIncorrect==false && AMDCorrect==false && mouseX>=AMDButtonX && mouseY>=AMDButtonY && mouseX<=AMDButtonX+AMDButtonWidth && mouseY<=AMDButtonY+AMDButtonHeight) {
       NvidiaIncorrect=false;
       AMDCorrect=true;
       correctSoundEffect.pause();
       correctSoundEffect.rewind();
       correctSoundEffect.play();
     }
-    if (NvidiaIncorrect==false && AMDCorrect==true && mouseX>=twelveHourTimeButtonX && mouseY>=twelveHourTimeButtonY && mouseX<=twelveHourTimeButtonX+twelveHourTimeButtonWidth && mouseY<=twelveHourTimeButtonY+twelveHourTimeButtonHeight) {
+    if (NvidiaIncorrect==false && AMDCorrect==true && twelveHourTimeIncorrect==false && twentyFourHourTimeCorrect==false && mouseX>=twelveHourTimeButtonX && mouseY>=twelveHourTimeButtonY && mouseX<=twelveHourTimeButtonX+twelveHourTimeButtonWidth && mouseY<=twelveHourTimeButtonY+twelveHourTimeButtonHeight) {
       twelveHourTimeIncorrect=true;
       twentyFourHourTimeCorrect=false;
       song1.pause();
@@ -266,14 +275,14 @@ void mousePressedChoosing() {
       song2.rewind();
       incorrectSoundEffect.play();
     }
-    if (NvidiaIncorrect==false && AMDCorrect==true && mouseX>=twentyFourHourTimeButtonX && mouseY>=twentyFourHourTimeButtonY && mouseX<=twentyFourHourTimeButtonX+twentyFourHourTimeButtonWidth && mouseY<=twentyFourHourTimeButtonY+twentyFourHourTimeButtonHeight) {
+    if (NvidiaIncorrect==false && AMDCorrect==true && twelveHourTimeIncorrect==false && twentyFourHourTimeCorrect==false && mouseX>=twentyFourHourTimeButtonX && mouseY>=twentyFourHourTimeButtonY && mouseX<=twentyFourHourTimeButtonX+twentyFourHourTimeButtonWidth && mouseY<=twentyFourHourTimeButtonY+twentyFourHourTimeButtonHeight) {
       twelveHourTimeIncorrect=false;
       twentyFourHourTimeCorrect=true;
       correctSoundEffect.pause();
       correctSoundEffect.rewind();
       correctSoundEffect.play();
     }
-    if (twelveHourTimeIncorrect==false && twentyFourHourTimeCorrect && mouseX>=PepsiButtonX && mouseY>=PepsiButtonY && mouseX<=PepsiButtonX+PepsiButtonWidth && mouseY<=PepsiButtonY+PepsiButtonHeight) {
+    if (twelveHourTimeIncorrect==false && twentyFourHourTimeCorrect && PepsiIncorrect==false && CocaColaCorrect==false && mouseX>=PepsiButtonX && mouseY>=PepsiButtonY && mouseX<=PepsiButtonX+PepsiButtonWidth && mouseY<=PepsiButtonY+PepsiButtonHeight) {
       PepsiIncorrect=true;
       CocaColaCorrect=false;
       song1.pause();
@@ -282,14 +291,14 @@ void mousePressedChoosing() {
       song2.rewind();
       incorrectSoundEffect.play();
     }
-    if (twelveHourTimeIncorrect==false && twentyFourHourTimeCorrect && mouseX>=CocaColaButtonX && mouseY>=CocaColaButtonY && mouseX<=CocaColaButtonX+CocaColaButtonWidth && mouseY<=CocaColaButtonY+CocaColaButtonHeight) {
+    if (twelveHourTimeIncorrect==false && twentyFourHourTimeCorrect && PepsiIncorrect==false && CocaColaCorrect==false && mouseX>=CocaColaButtonX && mouseY>=CocaColaButtonY && mouseX<=CocaColaButtonX+CocaColaButtonWidth && mouseY<=CocaColaButtonY+CocaColaButtonHeight) {
       PepsiIncorrect=false;
       CocaColaCorrect=true;
       correctSoundEffect.pause();
       correctSoundEffect.rewind();
       correctSoundEffect.play();
     }
-    if (PepsiIncorrect==false && CocaColaCorrect && mouseX>=footballButtonX && mouseY>=footballButtonY && mouseX<=footballButtonX+footballButtonWidth && mouseY<=footballButtonY+footballButtonHeight) {
+    if (PepsiIncorrect==false && CocaColaCorrect && footballIncorrect==false && soccerCorrect==false && mouseX>=footballButtonX && mouseY>=footballButtonY && mouseX<=footballButtonX+footballButtonWidth && mouseY<=footballButtonY+footballButtonHeight) {
       soccerCorrect=false;
       footballIncorrect=true;
       song1.pause();
@@ -298,14 +307,14 @@ void mousePressedChoosing() {
       song2.rewind();
       incorrectSoundEffect.play();
     }
-    if (PepsiIncorrect==false && CocaColaCorrect && mouseX>=soccerButtonX && mouseY>=soccerButtonY && mouseX<=soccerButtonX+soccerButtonWidth && mouseY<=soccerButtonY+soccerButtonHeight) {
+    if (PepsiIncorrect==false && CocaColaCorrect && footballIncorrect==false && soccerCorrect==false && mouseX>=soccerButtonX && mouseY>=soccerButtonY && mouseX<=soccerButtonX+soccerButtonWidth && mouseY<=soccerButtonY+soccerButtonHeight) {
       soccerCorrect=true;
       footballIncorrect=false;
       correctSoundEffect.pause();
       correctSoundEffect.rewind();
       correctSoundEffect.play();
     }
-    if (footballIncorrect==false && soccerCorrect && mouseX>=sixteenByTenButtonX && mouseY>=sixteenByTenButtonY && mouseX<=sixteenByTenButtonX+sixteenByTenButtonWidth && mouseY<=sixteenByTenButtonY+sixteenByTenButtonHeight) {
+    if (footballIncorrect==false && soccerCorrect && sixteenByTenIncorrect==false && eightByFiveCorrect==false && mouseX>=sixteenByTenButtonX && mouseY>=sixteenByTenButtonY && mouseX<=sixteenByTenButtonX+sixteenByTenButtonWidth && mouseY<=sixteenByTenButtonY+sixteenByTenButtonHeight) {
       sixteenByTenIncorrect=true;
       eightByFiveCorrect=false;
       song1.pause();
@@ -314,14 +323,14 @@ void mousePressedChoosing() {
       song2.rewind();
       incorrectSoundEffect.play();
     }
-    if (footballIncorrect==false && soccerCorrect && mouseX>=eightByFiveButtonX && mouseY>=eightByFiveButtonY && mouseX<=eightByFiveButtonX+eightByFiveButtonWidth && mouseY<=eightByFiveButtonY+eightByFiveButtonHeight) {
+    if (footballIncorrect==false && soccerCorrect && sixteenByTenIncorrect==false && eightByFiveCorrect==false && mouseX>=eightByFiveButtonX && mouseY>=eightByFiveButtonY && mouseX<=eightByFiveButtonX+eightByFiveButtonWidth && mouseY<=eightByFiveButtonY+eightByFiveButtonHeight) {
       sixteenByTenIncorrect=false;
       eightByFiveCorrect=true;
       correctSoundEffect.pause();
       correctSoundEffect.rewind();
       correctSoundEffect.play();
     }
-    if (sixteenByTenIncorrect==false && eightByFiveCorrect && mouseX>=NikeButtonX && mouseY>=NikeButtonY && mouseX<=NikeButtonX+NikeButtonWidth && mouseY<=NikeButtonX+NikeButtonHeight) {
+    if (sixteenByTenIncorrect==false && eightByFiveCorrect && NikeIncorrect==false && AdidasCorrect==false && mouseX>=NikeButtonX && mouseY>=NikeButtonY && mouseX<=NikeButtonX+NikeButtonWidth && mouseY<=NikeButtonX+NikeButtonHeight) {
       NikeIncorrect=true;
       AdidasCorrect=false;
       song1.pause();
@@ -330,12 +339,46 @@ void mousePressedChoosing() {
       song2.rewind();
       incorrectSoundEffect.play();
     }
-    if (sixteenByTenIncorrect==false && eightByFiveCorrect && mouseX>=AdidasButtonX && mouseY>=AdidasButtonY && mouseX<=AdidasButtonX+AdidasButtonWidth && mouseY<=AdidasButtonX+AdidasButtonHeight) {
+    if (sixteenByTenIncorrect==false && eightByFiveCorrect && NikeIncorrect==false && AdidasCorrect==false && mouseX>=AdidasButtonX && mouseY>=AdidasButtonY && mouseX<=AdidasButtonX+AdidasButtonWidth && mouseY<=AdidasButtonX+AdidasButtonHeight) {
       NikeIncorrect=false;
       AdidasCorrect=true;
       correctSoundEffect.pause();
       correctSoundEffect.rewind();
       correctSoundEffect.play();
+      victorySong.loop(-1);
+      song1.pause();
+      song1.rewind();
+      song2.pause();
+      song2.rewind();
+    }
+    if (PS5Correct && AppleCorrect && heavyMouseCorrect && AMDCorrect && twentyFourHourTimeCorrect && CocaColaCorrect && soccerCorrect && eightByFiveCorrect && AdidasCorrect && mouseX>=appWidth/6 && mouseY>=appHeight/6 && mouseX<=appWidth*5/6 && mouseY<=appHeight*5/6) {
+      PS5Correct=false;
+      XSXIncorrect=false;
+      AppleCorrect=false;
+      AndroidIncorrect=false;
+      lightMouseIncorrect=false;
+      heavyMouseCorrect=false;
+      AMDCorrect=false;
+      NvidiaIncorrect=false;
+      twelveHourTimeIncorrect=false;
+      twentyFourHourTimeCorrect=false;
+      CocaColaCorrect=false;
+      PepsiIncorrect=false;
+      soccerCorrect=false;
+      footballIncorrect=false;
+      sixteenByTenIncorrect=false;
+      eightByFiveCorrect=false;
+      NikeIncorrect=false;
+      AdidasCorrect=false;
+      victorySong.pause();
+      victorySong.rewind();
+    }
+    if (mouseX>=nightModeButtonX && mouseY>=nightModeButtonY && mouseX<=nightModeButtonX+nightModeButtonWidth && mouseY<=nightModeButtonY+nightModeButtonHeight) {
+      if (nightMode) {
+        nightMode=false;
+      } else {
+        nightMode=true;
+      }
     }
   }
 }
