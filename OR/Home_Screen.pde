@@ -37,10 +37,18 @@ void quitButton() {
   fill(red);
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
   quitButtonText();
-  if (nightMode) {
-    fill(255);
+  if (mouseX>=nightModeButtonX && mouseY>=nightModeButtonY && mouseX<=nightModeButtonX+nightModeButtonWidth && mouseY<=nightModeButtonY+nightModeButtonHeight) {
+    if (nightMode) {
+      fill(0);
+    } else {
+      fill(255);
+    }
   } else {
-    fill(0);
+    if (nightMode) {
+      fill(255);
+    } else {
+      fill(0);
+    }
   }
   rect(nightModeButtonX, nightModeButtonY, nightModeButtonWidth, nightModeButtonHeight);
 }
