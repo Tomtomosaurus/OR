@@ -194,8 +194,8 @@ void choosingTime() {
   }
 }
 void mousePressedChoosing() {
-  if (OS && startProgram) {
-    if (mouseX>=XSXButtonX && mouseY>=XSXButtonY && mouseX<=XSXButtonX+XSXButtonWidth && mouseY<=XSXButtonY+XSXButtonHeight &&  XSXIncorrect==false && PS5Correct==false) {
+  if (startProgram) {
+    if (mouseX>=XSXButtonX && mouseY>=XSXButtonY && mouseX<=XSXButtonX+XSXButtonWidth && mouseY<=XSXButtonY+XSXButtonHeight && XSXIncorrect==false && PS5Correct==false) {
       XSXIncorrect=true;
       PS5Correct=false;
       song1.pause();

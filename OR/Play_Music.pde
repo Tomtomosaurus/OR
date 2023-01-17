@@ -106,4 +106,8 @@ void songKeyPressedCommands() {
       song2.play();
     }
   }
+  if (key=='e' || key=='E') {
+    EMEME.rewind();
+    EMEME.play();
+  }
 }
